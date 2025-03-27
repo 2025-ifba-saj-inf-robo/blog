@@ -16,6 +16,10 @@ p, li, dd{
     }
 }
 
+.vp-blog-hero-title{
+    text-shadow: #333 1px 0 10px;
+}
+
 #toc {
     @media (min-width: 900px) {
         .has-toc & {
