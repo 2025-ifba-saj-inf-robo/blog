@@ -1,9 +1,10 @@
 ---
 title: Markdown Enhance
+date: 2025-03-27 17:40:00.00 -3
 icon: fa6-brands:markdown
 order: 2
 category:
-  - Guide
+  - aula
 tag:
   - Markdown
 ---
@@ -321,3 +322,20 @@ end
 <iframe src="https://plugin-md-enhance-demo.vuejs.press/snippet/vue-playground.html" width="100%" height="380"/>
 
 - [View Detail](https://theme-hope.vuejs.press/guide/markdown/code/vue-playground.html)
+
+#### Enhanced Table Example
+
+| Feature | Syntax | Description | Support Level |
+|:--------|:------:|:------------|-------------:|
+| Headers | `# H1` | Creates heading elements | ✅ Full |
+| Bold | `**bold**` | Makes text bold | ✅ Full |
+| Italic | `*italic*` | Makes text italic | ✅ Full |
+| Code | `` `code` `` | Formats text as code | ✅ Full |
+| Links | `[text](url)` | Creates hyperlinks | ✅ Full |
+| Images | `![alt](src)` | Embeds images | ✅ Full |
+| Lists | `- item` | Creates unordered lists | ✅ Full |
+| Numbered Lists | `1. item` | Creates ordered lists | ✅ Full |
+| Blockquotes | `> quote` | Creates blockquotes | ✅ Full |
+| Horizontal Rule | `---` | Creates horizontal divider | ✅ Full |
+
+: Table demonstrating Markdown syntax features

@@ -4,8 +4,8 @@ layout: BlogHome
 icon: house
 title: Inicio
 heroImage: logo.svg
-heroText: Aulas de Rob�tica
-tagline: Materirial de apoio para aulas de rob�tica
+heroText: Aulas de Robótica
+tagline: Material de apoio para aulas de robótica
 heroFullScreen: true
 bgImage: ./assets/bg/home-made-robot-desk.jpg
 projects:
