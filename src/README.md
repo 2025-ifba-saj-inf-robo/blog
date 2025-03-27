@@ -2,25 +2,26 @@
 home: true
 layout: BlogHome
 icon: house
-title: Blog Home
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: The name of your blog
-tagline: You can put your slogan here
+title: Inicio
+heroImage: logo.svg
+heroText: Aulas de Rob�tica
+tagline: Materirial de apoio para aulas de rob�tica
 heroFullScreen: true
+bgImage: ./assets/bg/home-made-robot-desk.jpg
 projects:
   - icon: folder-open
-    name: project name
-    desc: project detailed description
+    name: nome do projeto
+    desc: detalhes do projeto
     link: https://your.project.link
 
   - icon: link
-    name: link name
-    desc: link detailed description
+    name: links externos
+    desc: mais material para estudar
     link: https://link.address
 
   - icon: book
-    name: book name
-    desc: Detailed description of the book
+    name: ebook 
+    desc: livro em pdf
     link: https://link.to.your.book
 
   - icon: newspaper
@@ -38,11 +39,4 @@ projects:
     desc: Detailed description of this custom item
     link: https://link.to.your.friend
 
-footer: customize your footer text
 ---
-
-This is a blog home page demo.
-
-To use this layout, you should set both `layout: BlogHome` and `home: true` in the page front matter.
-
-For related configuration docs, please see [blog homepage](https://theme-hope.vuejs.press/guide/blog/home.html).

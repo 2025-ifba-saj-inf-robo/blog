@@ -4,16 +4,21 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  //hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "IFBA SAJ",
+    url: "https://github.com/leandro-costa",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  copyright: false,
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  lastUpdated: false,
+  contributors: false,
+
+  logo: "/logo.svg",
+
+  repo: "2025-ifba-saj-inf-robo/blog",
 
   docsDir: "src",
 
@@ -23,31 +28,24 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-  footer: "Default footer",
+  footer: "Material de aula da disciplina de robótica IFBA SAJ",
 
   displayFooter: true,
 
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
-      },
-    },
-  },
-
   blog: {
-    description: "A FrontEnd programmer",
-    intro: "/intro.html",
+    description: "Material de Aula",
+    //intro: "/intro.html",
+
+    avatar: "/assets/icon/icon-512.png",
     medias: {
-      GitHub: "https://example.com",
-      Gmail: "mailto:info@example.com",
+      Email: "mailto:leandro.costa@ifba.edu.br",
+      GitHub: "https://github.com/leandro-costa",
     },
   },
 
   metaLocales: {
-    editLink: "Edite essa página no Github",
-    //toc: "Nesta página"
+    editLink: "Edite esta página no GitHub",
+    toc: "Nesta Página",
   },
 
   // enable it to preview all changes in time
@@ -127,6 +125,7 @@ export default hopeTheme({
     blog: {
       excerpt: false,
     },
+    search: true,
 
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
