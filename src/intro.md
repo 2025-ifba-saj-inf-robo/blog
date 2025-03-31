@@ -4,6 +4,6 @@ icon: circle-info
 article: false
 ---
 
-# Intro Page
+# Pagina de apresentação
 
-Place your introduction and profile here.
+Aqui deve ser descrito o perfil do escritor

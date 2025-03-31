@@ -1,0 +1,46 @@
+```plantuml
+@startuml
+<style>
+rectangle {
+  MinimumWidth 100
+  HorizontalAlignment center
+}
+
+</style>
+
+skinparam {
+  BackgroundColor white
+  ArrowColor black
+  BorderColor black
+  FontName Arial
+  FontSize 14
+}
+
+
+rectangle "Mundo Externo\n(Entradas Digitais)" as Entrada #LightYellow
+rectangle "\nSistema Digital\n" as Sistema #LightBlue {
+  
+}
+rectangle "Mundo Externo\n(Saídas Digitais)" as Saida #LightGreen
+
+Entrada -> Sistema : "Alfabeto Finito\nde Entrada"
+Sistema -> Saida : "Alfabeto Finito\nde Saída"
+
+note bottom of Sistema
+  Um sistema digital é uma função de transformação 
+  que converte um alfabeto finito de entrada 
+  em outro alfabeto finito de saída
+end note
+
+note bottom of Entrada
+  Interface digital 
+  com o mundo externo
+end note
+
+note bottom of Saida
+  Interface digital
+  com o mundo externo
+end note
+
+@enduml
+```

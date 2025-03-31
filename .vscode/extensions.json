@@ -2,6 +2,7 @@
     "recommendations": [
         "sourcegraph.cody-ai",
         "shd101wyy.markdown-preview-enhanced",
-        "jebbs.plantuml"
+        "jebbs.plantuml",
+        "yzhang.markdown-all-in-one"
     ]
 }

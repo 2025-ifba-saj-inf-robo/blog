@@ -8,7 +8,7 @@ category:
 star: true
 index: false
 ---
-# Plano de Curso de 
+# Plano de Curso
 
 **Curso**: Técnico em Informática
 **Núcleo**: Tecnológico

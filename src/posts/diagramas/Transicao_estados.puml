@@ -1,0 +1,42 @@
+```plantuml
+digraph FSM {
+    // Configurações gerais do grafo
+    rankdir=LR;
+    size="8,5";
+    node [shape = circle, fontname = "Arial", fontsize = 14, style = filled, fillcolor = lightblue];
+    edge [fontname = "Arial", fontsize = 12];
+    
+    
+    // Estados da máquina
+    node [shape = circle, fillcolor = lightblue];
+    A [label = "A (00)\nSaída=0"];
+    B [label = "B (01)\nSaída=0"];
+    C [label = "C (10)\nSaída=0"];
+    D [label = "D (11)\nSaída=1", fillcolor = lightgreen];
+    
+    // Transições
+    A -> A [label = "Iniciar=0, X"];
+    A -> B [label = "Iniciar=1, X"];
+    
+    B -> B [label = "X, Bit=0"];
+    B -> C [label = "X, Bit=1"];
+    
+    C -> B [label = "X, Bit=0"];
+    C -> D [label = "X, Bit=1"];
+    
+    D -> B [label = "X, Bit=0"];
+    D -> D [label = "X, Bit=1"];
+    
+    // Anotações
+    {
+        node [shape = note, fillcolor = lightyellow, style = filled];
+        note_A [label = "Estado inicial"];
+        note_D [label = "Reconheceu dois\nbits 1 consecutivos"];
+        
+        // Conectar anotações aos estados
+        note_A -> A [style = dotted, arrowhead = none];
+        note_D -> D [style = dotted, arrowhead = none];
+    }
+}
+
+```

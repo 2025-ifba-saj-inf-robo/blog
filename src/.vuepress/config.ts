@@ -21,7 +21,11 @@ export default defineUserConfig({
   description: "Material das Aulas",
 
   extendsMarkdown: (md) => {    
-    md.use(umlPlugin, {openMarker: '```plantuml', closeMarker: '```'})
+    md.use(umlPlugin, {
+      openMarker: '```plantuml', 
+      closeMarker: '```',
+      server: 'https://kroki.io/plantuml/'
+    })
     md.use(table_captions)
   },
 

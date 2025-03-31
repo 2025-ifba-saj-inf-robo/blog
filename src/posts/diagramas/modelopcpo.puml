@@ -1,0 +1,41 @@
+```plantuml
+digraph Diagrama {
+    splines=ortho; // Linhas ortogonais
+    layout=neato; // Necessário para respeitar as posições
+    
+    node [shape=box, style="filled", fillcolor=lightgrey, fontname="Arial", fontsize=12];
+    
+    PC [pos="5,0!",shape=plaintext, width=1.5, height=1.5,label=<
+        <table border="0" cellborder="0" cellspacing="0">
+            <tr><td align="center"><b>PC</b></td></tr>
+            <tr><td align="left">FSM</td></tr>
+        </table>
+    >];
+
+
+    // Nó com formatação rica
+    PO [pos="0,0!",shape=plaintext, width=1.5, height=1.5 ,label=<
+        <table border="0" cellborder="0" cellspacing="0">
+            <tr><td align="center"><b>PO</b></td></tr>
+            <tr><td align="left">Operadores</td></tr>
+            <tr><td align="left">Registradores</td></tr>
+            <tr><td align="left">Conexões</td></tr>
+        </table>
+    >];
+
+    R [pos="2.5,-2!", label="Relógio"]
+
+    R -> PC;
+    R -> PO;
+    PO -> PC [label="STATUS"];
+    PC -> PO [label="COMANDOS"];
+
+    // Nó invisível
+    // X [style=invis];
+    X [pos="-2,0!",style=invis]
+    X -> PO [label="  E/S",dir=both]
+    Y [pos="6,0!"]
+    Y -> PC [label="  E/S",dir=both]
+
+}
+```
