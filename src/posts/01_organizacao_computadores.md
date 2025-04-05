@@ -19,12 +19,9 @@ Por exemplo, decidir se um computador terá uma instrução de multiplicação �
 Um sistema de computador, como qualquer sistema, consiste em um conjunto inter-relacionado de **componentes**. Ele pode ser caracterizado em termos de **estrutura** (a forma como os componentes estão interligados) e **função** (a operação dos componentes individuais). Ao estudar o hardware de um computador digital, é essencial observar tanto a sua estrutura quanto a sua função. A estrutura define como os componentes se inter-relacionam, enquanto a função define a funcionalidade específica de cada componente.
 
 
-<figure>
 
-![Excalidraw](./excalidraw/computador.excalidraw-animate.svg)
+![Um computador: estrutura de alto nível](./excalidraw/computador.excalidraw-animate.svg)
 
-<figcaption>Um computador: estrutura de alto nível</figcaption>
-</figure>
 
 Em termos gerais, existem quatro **funções básicas** que um computador pode realizar:
 
