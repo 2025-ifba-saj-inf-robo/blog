@@ -16,6 +16,11 @@
       (match, p1) => `@import "${p1.trim()}"`
     );
     
+    // Substitui imagens ![alt](src) por <figure><img src alt /><figcaption>alt</figcaption></figure>
+    markdown = markdown.replace(
+      /!\[(.*?)\]\((.*?)\)/g,
+      (match, alt, src) => `<figure>\n  <img src="${src}" alt="${alt}" />\n  <figcaption>${alt}</figcaption>\n</figure>`
+    );
 
     // Substitui ::: tipo por !!! tipo e ajusta a indentação
     markdown = markdown.replace(
