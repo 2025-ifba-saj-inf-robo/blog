@@ -22,7 +22,6 @@
       (match, alt, src) => `<figure>\n  <img src="${src}" alt="${alt}" />\n  <figcaption>${alt}</figcaption>\n</figure>`
     );
 
-
     // Substitui ::: tipo por !!! tipo e ajusta a indentação
     markdown = markdown.replace(
       /::: (\w+)\s*([\s\S]*?)\s*:::/g,
