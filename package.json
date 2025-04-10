@@ -14,6 +14,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.20",
     "@vuepress/plugin-pwa": "2.0.0-rc.86",
     "@vuepress/plugin-search": "2.0.0-rc.87",
+    "markdown-it": "^14.1.0",
     "markdown-it-plantuml": "^1.4.1",
     "markdown-it-table-captions": "^1.0.4",
     "mathjax-full": "^3.2.2",

@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import umlPlugin from 'markdown-it-plantuml';
 import table_captions from 'markdown-it-table-captions'
 import theme from "./theme.js";
+import { upmathPlugin } from './plugins/upmath.js'
 
 export default defineUserConfig({
   base: "/blog/",
@@ -13,7 +14,7 @@ export default defineUserConfig({
         src: "https://www.jdoodle.com/assets/jdoodle-pym.min.js",
         type: "text/javascript",
       },
-    ],
+    ],    
   ],
 
   lang: "pt-BR",
@@ -28,6 +29,8 @@ export default defineUserConfig({
     })
     md.use(table_captions)
   },
+
+  plugins: [upmathPlugin()],
 
 
   theme,

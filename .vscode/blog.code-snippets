@@ -31,6 +31,16 @@
 	   "prefix": "run",
 	   "body": ["<codapi-snippet sandbox=\"java\" editor=\"basic\"></codapi-snippet>"],
 	   "description": "run java code"
+   },
+   "upmath":{
+	"scope": "markdown",
+	"prefix": "upmath",
+	"body": [
+			"```upmath",
+			"$1",
+		   "```"
+		],
+	"description": "latex processor"
    }
 
 }

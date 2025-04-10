@@ -124,6 +124,7 @@ export default hopeTheme({
   },
 
   plugins: {
+    
     blog: {
       excerpt: false,
     },
