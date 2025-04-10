@@ -110,6 +110,7 @@ O sistema hexadecimal utiliza 16 símbolos: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, 
 
 ## Conversão Entre Sistemas de Numeração
 
+<NumberConverter />
 
 ### Conversão de Decimal para Outra Base
 
