@@ -299,3 +299,5 @@ Na próxima aula, exploraremos as funções e portas lógicas, que são os bloco
    b) A7 (hexadecimal) para decimal
    c) 1101 0111 (binário) para octal
    d) 753 (octal) para binário
+
+[Link para entrega](https://classroom.github.com/a/_sPMQ8WQ)
