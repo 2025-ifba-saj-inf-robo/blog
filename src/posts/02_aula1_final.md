@@ -1,4 +1,6 @@
-
+---
+article: false
+---
 
 # Teste novo plugin
 
