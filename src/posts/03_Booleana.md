@@ -3,6 +3,8 @@ icon: edit
 date: 2025-04-15 10:20:00.00 -3  
 category:  
    - aula  
+   - exercicio  
+   - entrega
 order: 3
 ---  
 
