@@ -190,32 +190,6 @@ O sistema binário é a base de toda a computação moderna. Vamos explorar mais
 - **Bit**: A menor unidade de informação em um sistema digital, que pode assumir apenas um de dois valores: 0 ou 1.
 - **Byte**: Um conjunto de 8 bits, capaz de representar 2⁸ = 256 valores diferentes (de 0 a 255).
 
-#### Representação de Números Inteiros
-
-Os números inteiros podem ser representados em binário de diferentes formas:
-
-1. **Representação sem sinal**: Utiliza todos os bits para representar valores positivos, de 0 até 2^n - 1, onde n é o número de bits.
-2. **Complemento de 1**: O bit mais significativo indica o sinal (0 para positivo, 1 para negativo). Para números negativos, todos os bits são invertidos.
-3. **Complemento de 2**: Similar ao complemento de 1, mas para números negativos, após inverter todos os bits, soma-se 1 ao resultado.
-
-**Exemplo**: Representação do número -5 em complemento de 2 usando 8 bits:
-- 5 em binário: 00000101
-- Invertendo todos os bits: 11111010
-- Somando 1: 11111011
-- Resultado: 11111011 representa -5 em complemento de 2
-
-#### Representação de Números Fracionários
-
-Para representar números fracionários em binário, utilizamos o ponto binário (equivalente ao ponto decimal). Os dígitos à direita do ponto representam potências negativas da base.
-
-**Exemplo**: O número binário 101.11 pode ser interpretado como:
-- 1 × 2² = 1 × 4 = 4
-- 0 × 2¹ = 0 × 2 = 0
-- 1 × 2⁰ = 1 × 1 = 1
-- 1 × 2⁻¹ = 1 × 0.5 = 0.5
-- 1 × 2⁻² = 1 × 0.25 = 0.25
-- Total: 4 + 0 + 1 + 0.5 + 0.25 = 5.75 (em decimal)
-
 ### Operações Aritméticas em Binário
 
 #### Adição Binária

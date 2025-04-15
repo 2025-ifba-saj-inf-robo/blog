@@ -150,21 +150,20 @@ Veja a tabela verdade a seguir e compare os resultados.
 | 0 | 1 | 0 |   0   |  0  |    0    |  0  |    0    |
 | 0 | 1 | 1 |   0   |  0  |    0    |  1  |    0    |
 | 1 | 0 | 0 |   0   |  0  |    0    |  0  |    0    |
-| 1 | 0 | 1 |   0   |  0  |    0    |  0  |    1    |
+| 1 | 0 | 1 |   0   |  0  |    0    |  0  |    0    |
 | 1 | 1 | 0 |   0   |  1  |    0    |  0  |    0    |
 | 1 | 1 | 1 |   1   |  1  |    1    |  1  |    1    |
 
 
-#### 2.1.3 Complementação (ou Negação, ou Inversão)
+### Complementação (ou Negação, ou Inversão)
 
 A operação 'complementação dispensa uma definição. É a operação cujo resultado é simplesmente o valor complementar ao que a variável apresenta. Também devido ao fato de uma variável Booleana poder assumir um entre somente dois valores, o valor complementar será 1 se a variável vale 0 e será 0 se a variável vale 1. 
 
 Os símbolos utilizados para representar a operação complementação sobre uma variável Booleana A são $\overline{A}$ , ~A e A' (lê-se A negado). Nesta disciplina, adotaremos o primeiro símbolo. O resultado da operação complementação pode ser listado: 
 
-$$
-\overline{0}    =     1 \\\\
-\overline{1}    =     0 
-$$
+$\overline{0}    =     1$
+
+$\overline{1}    =     0$
 
 
 Diferentemente das operações  OU e  E,  a  complementação só é definida sobre uma variável, ou sobre o resultado de uma expressão. Ou seja,  o operador complementação é dito unário. 
@@ -178,12 +177,7 @@ A | ¬A
 1 |  0
 
 
-
-### 2.2 Avaliação de Expressões Booleanas
-
-Dada a equação que descreve uma função Booleana qualquer, deseja-se saber detalhadamente como esta função se comporta para qualquer combinação das variáveis de entrada. O comportamento de uma função é descrito pela sua tabela verdade.
-
-## 2.2 Avaliação de Expressões Booleanas
+## Avaliação de Expressões Booleanas
 
 Dada a equação que descreve uma função Booleana qualquer, deseja-se saber detalhadamente como esta função se comporta para qualquer combinação das variáveis de entrada. O comportamento de uma função é descrito pela sua tabela verdade e este problema é conhecido como avaliação da função ou da expressão que descreve a função considerada. Em suma, deseja-se achar a tabela verdade para a função Booleana.
 
@@ -219,7 +213,7 @@ Para a expressão `W = X + Y × Z`, a tabela verdade é:
 
 
 
-### Exercícios
+## Exercícios
 
 1. **Tabela Verdade para Operação OU**  
         Construa a tabela verdade para a expressão Booleana `A + B + C + D`. Liste todas as combinações possíveis das variáveis de entrada e determine o resultado da operação.
