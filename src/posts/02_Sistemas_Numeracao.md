@@ -3,6 +3,7 @@ icon: edit
 date: 2025-04-08 10:20:00.00 -3
 category:
   - aula
+order: 2
 ---
 
 # Sistemas de Numeração e Sistema Binário

@@ -3,6 +3,7 @@ icon: edit
 date: 2025-04-03 13:00:00.00 -3
 category:
   - aula
+order: 1
 ---
 
 # Conceitos básicos de arquitetura de computadores
