@@ -7,6 +7,8 @@ article: false
 
 <NumberConverter />
 
+<BooleanCircuit />
+
 ```upmath
 \begin{circuitikz}
 \draw(0,0) node[above] {$A$} to[short, o-*] ++(0.7,0)
