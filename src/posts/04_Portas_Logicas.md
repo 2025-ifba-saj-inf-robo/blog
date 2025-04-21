@@ -234,7 +234,49 @@ A porta que simboliza a operação  complementação é conhecida como  inversor
 
 ## Circuito Lógico 
 
-Dada uma equação Booleana qualquer, é possível desenhar-se o circuito lógico que a implementa. O circuito lógico é composto das portas lógicas relacionadas às operações que são realizadas sobre as variáveis de entrada. Os resultados das operações são conduzidos por fios, os quais, no desenho, são representados por linhas simples. 
+Dada uma equação Booleana qualquer, é possível desenhar o circuito lógico que a implementa. O circuito lógico é composto das portas lógicas relacionadas às operações que são realizadas sobre as variáveis de entrada. Os resultados das operações são conduzidos por fios, os quais, no desenho, são representados por linhas simples. 
+
+<figure>
+
+```upmath
+\usetikzlibrary {circuits.logic.US}
+\begin{tikzpicture}[circuit logic US]
+% Desenha os blocos
+\node[draw, rectangle] (tempTransducer) at (0, 2) {
+    \begin{tabular}{c} % O tabular alinha o texto centralizado
+        Transdutor de  \\ 
+        temperatura
+    \end{tabular}
+};
+\node[draw, rectangle] (pressureTransducer) at (0, 0) {
+    \begin{tabular}{c} % O tabular alinha o texto centralizado
+        Transdutor de  \\ 
+        pressão
+    \end{tabular}
+};
+\node[draw, rectangle] (tempComparator) at (4, 2) {Comparador};
+\node[draw, rectangle] (pressureComparator) at (4, 0) {Comparador};
+\node[or gate] (orGate) at (6, 1) {};
+\node[draw, rectangle] (alarm) at (8, 1) {Alarme};
+% Desenha o retângulo tracejado ao redor dos transdutores
+\draw[dashed] (-2, -1) rectangle (2, 3);
+\node at (-0.2, -0.8) {Processo químico};
+% Desenha as setas e os rótulos
+\draw[->] (tempTransducer) -- node[above] {$V_T$} (tempComparator);
+\draw[->] (pressureTransducer) -- node[above] {$V_P$} (pressureComparator);
+\draw[->] (tempComparator.east) -- ++(right:3mm) |-  node[above] {$T_H$} (orGate.input 1) ;
+\draw[->] (pressureComparator.east) -- ++(right:3mm) |- node[below] {$P_H$} (orGate.input 2);
+\draw[->] (orGate.output) -- (alarm.west);
+% Adiciona os rótulos de tensão de referência
+\node (VTR) at (2.5, 1) {$V_{TR}$};
+\draw[->] (VTR) --  (tempComparator);
+\node (VPR) at (2.5, -1) {$V_{PR}$};
+\draw[->] (VPR) --  (pressureComparator);
+\end{tikzpicture}
+```
+
+<figcaption>Circuito lógico para um sistema de controle de uma planta industrial</figcaption>
+</figure>
 
 Os passos a serem seguidos para se realizar o desenho do circuito lógico a partir de uma equação são praticamente os mesmos usados na avaliação da expressão. Tomemos como exemplo   a   equação,   avaliada   em [Álgebra Booleana e Circuitos Lógicos](03_Booleana.md).   Inicialmente,   identificamos   as   variáveis independentes,  que  no  caso  são  $X$,  $Y$  e  $Z$.  Para  cada  uma  destas,  traçamos  uma  linha  (da esquerda para a direita), representando os fios que conduzem os valores. Feito isto, deve-se seguir  desenhando  as  portas  necessárias  para  representar  cada  uma  das  subexpressões,  na mesma ordem tomada para a avaliação, ou seja: 
 
