@@ -15,6 +15,15 @@
       /@\[code\]\((.*?)\)/g,
       (match, p1) => `@import "${p1.trim()}"`
     );
+
+    // Substitui blocos ```upmath ... ``` por uma imagem gerada via upmath
+    markdown = markdown.replace(
+      /```upmath\s*([\s\S]*?)```/g,
+      (match, latex) => {
+      const url = `http://i.upmath.me/svg/${encodeURIComponent(latex.trim())}`;
+      return `<p><img src="${url}" /></p>`;
+      }
+    );
     
     // Substitui imagens ![alt](src) por <figure><img src alt /><figcaption>alt</figcaption></figure>
     markdown = markdown.replace(

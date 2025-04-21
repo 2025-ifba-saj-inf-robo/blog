@@ -27,7 +27,7 @@ Na álgebra Booleana, existem três operações ou funções básicas: **operaç
 Uma definição para a operação OU, que também é denominada adição lógica, é:
 
 ::: info
-        A operação OU resulta 1 se pelo menos uma das variáveis de entrada vale 1.
+    A operação OU resulta 1 se pelo menos uma das variáveis de entrada vale 1.
 ::: 
 
 Como uma variável Booleana ou vale 1 ou vale 0, e como o resultado de uma operação qualquer pode ser encarado como (ou atribuído a) uma variável Booleana, basta que definamos quando a operação vale 1. Automaticamente, a operação resultará 0 nos demais casos. Assim, pode-se dizer que a operação OU resulta 0 somente quando todas as variáveis de entrada valem 0.
@@ -48,43 +48,47 @@ Note que a operação OU só pode ser definida se houver, pelo menos, duas vari�
 Nas equações, não costuma-se escrever todas as possibilidades de valores. Apenas adotamos uma letra (ou uma letra com um índice) para designar uma variável Booleana. Com isso, já se sabe que aquela variável pode assumir ou o valor 0 ou o valor 1. Então, supondo que queiramos demonstrar o comportamento da equação A+B (lê-se A ou B), poderíamos fazê-lo utilizando uma tabela verdade, como segue:
 
 
-| A | B | A+B |
-|---|---|-----|
-| 0 | 0 |   0 |
-| 0 | 1 |   1 |
-| 1 | 0 |   1 |
-| 1 | 1 |   1 |
+|   A   |   B   |  A+B  |
+| :---: | :---: | :---: |
+|   0   |   0   |   0   |
+|   0   |   1   |   1   |
+|   1   |   0   |   1   |
+|   1   |   1   |   1   |
+
+: Tabela verdade OU
 
 
 
 Da mesma forma, podemos mostrar o comportamento da equação A+B+C (lê-se A ou B ou C) por meio de uma tabela verdade. Como na equação há somente o símbolo “+”, trata-se da operação OU sobre três variáveis. Logo, pode-se aplicar diretamente a definição da operação OU: o resultado será 1 se pelo menos uma das variáveis de entrada valer 1.
 
  
-| A | B | C | A+B+C |
-|---|---|---|-------|
-| 0 | 0 | 0 |   0   |
-| 0 | 0 | 1 |   1   |
-| 0 | 1 | 0 |   1   |
-| 0 | 1 | 1 |   1   |
-| 1 | 0 | 0 |   1   |
-| 1 | 0 | 1 |   1   |
-| 1 | 1 | 0 |   1   |
-| 1 | 1 | 1 |   1   |
+|   A   |   B   |   C   | A+B+C |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   1   |
+|   0   |   1   |   0   |   1   |
+|   0   |   1   |   1   |   1   |
+|   1   |   0   |   0   |   1   |
+|   1   |   0   |   1   |   1   |
+|   1   |   1   |   0   |   1   |
+|   1   |   1   |   1   |   1   |
 
-
+: Tabela verdade A+B+C
 
 É importante notar que, devido ao fato de haver somente um operador na equação, pode-se também avaliar a equação decompondo-a em pares. Por exemplo, pode-se primeiramente achar o resultado de A+B, para depois operar os valores resultantes com os respectivos valores de C. Esta propriedade é conhecida como associativa. Também a ordem em que são avaliadas as variáveis A, B e C é irrelevante (propriedade comutativa). Estas propriedades são ilustradas pela tabela verdade a seguir. Nela, os parênteses indicam subexpressões já avaliadas em coluna imediatamente à esquerda. Note que os valores das colunas referentes às expressões A+B+C, (A+B)+C e (B+C)+A são os mesmos (na mesma ordem).
 
-| A | B | C | A+B+C | A+B | (A+B)+C | B+C | (B+C)+A |
-|---|---|---|-------|-----|---------|-----|---------|
-| 0 | 0 | 0 |   0   |  0  |    0    |  0  |    0    |
-| 0 | 0 | 1 |   1   |  0  |    1    |  1  |    1    |
-| 0 | 1 | 0 |   1   |  1  |    1    |  1  |    1    |
-| 0 | 1 | 1 |   1   |  1  |    1    |  1  |    1    |
-| 1 | 0 | 0 |   1   |  1  |    1    |  0  |    1    |
-| 1 | 0 | 1 |   1   |  1  |    1    |  1  |    1    |
-| 1 | 1 | 0 |   1   |  1  |    1    |  1  |    1    |
-| 1 | 1 | 1 |   1   |  1  |    1    |  1  |    1    |
+|   A   |   B   |   C   | A+B+C |  A+B  | (A+B)+C |  B+C  | (B+C)+A |
+| :---: | :---: | :---: | :---: | :---: | :-----: | :---: | :-----: |
+|   0   |   0   |   0   |   0   |   0   |    0    |   0   |    0    |
+|   0   |   0   |   1   |   1   |   0   |    1    |   1   |    1    |
+|   0   |   1   |   0   |   1   |   1   |    1    |   1   |    1    |
+|   0   |   1   |   1   |   1   |   1   |    1    |   1   |    1    |
+|   1   |   0   |   0   |   1   |   1   |    1    |   0   |    1    |
+|   1   |   0   |   1   |   1   |   1   |    1    |   1   |    1    |
+|   1   |   1   |   0   |   1   |   1   |    1    |   1   |    1    |
+|   1   |   1   |   1   |   1   |   1   |    1    |   1   |    1    |
+
+: Propriedade associativa e comutativa do OU
 
 
 ### Operação E (Multiplicação Lógica)
@@ -92,7 +96,7 @@ Da mesma forma, podemos mostrar o comportamento da equação A+B+C (lê-se A ou 
 A operação E, ou multiplicação lógica, pode ser definida da seguinte forma:
 
 ::: info
-A operação E resulta 0 se pelo menos uma das variáveis de entrada vale 0
+    A operação E resulta 0 se pelo menos uma das variáveis de entrada vale 0
 :::
 
 
@@ -114,27 +118,30 @@ O símbolo usualmente utilizado na operação E é “×”, porém outra notaç
 Assim como a operação OU, a operação E só pode ser definida entre, pelo menos duas variáveis. Ou seja,  o operador “×” (E) também é binário. 
 Para mostrar o comportamento da equação A  × B (lê-se A e B), escreve-se uma tabela 
 
-| A | B | A×B |
-|---|---|-----|
-| 0 | 0 |  0  |
-| 0 | 1 |  0  |
-| 1 | 0 |  0  |
-| 1 | 1 |  1  |
+|   A   |   B   |  A×B  |
+| :---: | :---: | :---: |
+|   0   |   0   |   0   |
+|   0   |   1   |   0   |
+|   1   |   0   |   0   |
+|   1   |   1   |   1   |
+
+: Tabela verdade E
 
 De forma semelhante, pode-se determinar o resultado da equação A×B×C (lê-se A e B e C) utilizando diretamente a definição da operação  E: o resultado será 0 se pelo menos uma das variáveis de entrada valer 0. 
 
 
-| A | B | C | A×B×C |
-|---|---|---|-------|
-| 0 | 0 | 0 |   0   |
-| 0 | 0 | 1 |   0   |
-| 0 | 1 | 0 |   0   |
-| 0 | 1 | 1 |   0   |
-| 1 | 0 | 0 |   0   |
-| 1 | 0 | 1 |   0   |
-| 1 | 1 | 0 |   0   |
-| 1 | 1 | 1 |   1   |
+|   A   |   B   |   C   | A×B×C |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   0   |
+|   0   |   1   |   0   |   0   |
+|   0   |   1   |   1   |   0   |
+|   1   |   0   |   0   |   0   |
+|   1   |   0   |   1   |   0   |
+|   1   |   1   |   0   |   0   |
+|   1   |   1   |   1   |   1   |
 
+: Tabela verdade AxBxC
 
 
 Também para a operação E valem as propriedades associativa e comutativa. Então, a equação A×BC pode ainda ser avaliada tomando-se as variáveis aos pares, em qualquer ordem. 
@@ -143,17 +150,18 @@ Veja a tabela verdade a seguir e compare os resultados.
 
 
 
-| A | B | C | A×B×C | A×B | (A×B)×C | B×C | A×(B×C) |
-|---|---|---|-------|-----|---------|-----|---------|
-| 0 | 0 | 0 |   0   |  0  |    0    |  0  |    0    |
-| 0 | 0 | 1 |   0   |  0  |    0    |  0  |    0    |
-| 0 | 1 | 0 |   0   |  0  |    0    |  0  |    0    |
-| 0 | 1 | 1 |   0   |  0  |    0    |  1  |    0    |
-| 1 | 0 | 0 |   0   |  0  |    0    |  0  |    0    |
-| 1 | 0 | 1 |   0   |  0  |    0    |  0  |    0    |
-| 1 | 1 | 0 |   0   |  1  |    0    |  0  |    0    |
-| 1 | 1 | 1 |   1   |  1  |    1    |  1  |    1    |
+|   A   |   B   |   C   | A×B×C |  A×B  | (A×B)×C |  B×C  | A×(B×C) |
+| :---: | :---: | :---: | :---: | :---: | :-----: | :---: | :-----: |
+|   0   |   0   |   0   |   0   |   0   |    0    |   0   |    0    |
+|   0   |   0   |   1   |   0   |   0   |    0    |   0   |    0    |
+|   0   |   1   |   0   |   0   |   0   |    0    |   0   |    0    |
+|   0   |   1   |   1   |   0   |   0   |    0    |   1   |    0    |
+|   1   |   0   |   0   |   0   |   0   |    0    |   0   |    0    |
+|   1   |   0   |   1   |   0   |   0   |    0    |   0   |    0    |
+|   1   |   1   |   0   |   0   |   1   |    0    |   0   |    0    |
+|   1   |   1   |   1   |   1   |   1   |    1    |   1   |    1    |
 
+: Propriedade associativa e comutativa do OU
 
 ### Complementação (ou Negação, ou Inversão)
 
@@ -171,10 +179,12 @@ Diferentemente das operações  OU e  E,  a  complementação só é definida so
 E a tabela verdade para $\overline{A}$ é: 
 
 
-A | ¬A
---|---
-0 |  1
-1 |  0
+|   A   |  ¬A   |
+| :---: | :---: |
+|   0   |   1   |
+|   1   |   0   |
+
+: Tabela verdade Negação
 
 
 ## Avaliação de Expressões Booleanas
@@ -195,39 +205,39 @@ O procedimento para a criação da tabela verdade a partir de uma equação Bool
     - Multiplicação lógica
     - Adição lógica
 
-Tomemos como exemplo a expressão `W = X + Y × Z`. A variável `W` representa a função Booleana propriamente dita. Esta variável depende das variáveis que estão à direita do sinal `=`, ou seja, depende de `X`, `Y` e `Z`. Logo, são 3 as variáveis de entrada. O total de combinações entre 3 variáveis será 2³ = 8. Então, a tabela verdade para `W` deverá ter 3 colunas à esquerda e 8 linhas. Seguindo o procedimento dado acima, cria-se uma coluna, na qual listam-se os valores para `Z`. Após, inicia-se a avaliação propriamente dita, a partir do nível mais interno de parêntesis. Como não há parêntesis na expressão, resolvem-se as subexpressões que envolvem a operação `E`. No caso em questão, há somente uma tal subexpressão, que é `X × Y`. Então, cria-se uma coluna para `X × Y`, na qual anotam-se os resultados para este produto. Finalmente, utilizam-se os resultados de `X × Y`, listados na coluna anterior, para operar o `OU` com a variável `X`. Repare os passos descritos na tabela verdade que segue. Nela, os parêntesis em torno do produto `X × Y` indicam somente que este termo já foi avaliado e que no passo referente a esta coluna, tomaram-se apenas os valores previamente encontrados.        
+Tomemos como exemplo a expressão $W = X + Y \cdot \overline{Z}$. A variável $W$ representa a função Booleana propriamente dita. Esta variável depende das variáveis que estão à direita do sinal $=$, ou seja, depende de $X$, $Y$ e $Z$. Logo, são 3 as variáveis de entrada. O total de combinações entre 3 variáveis será $2^3 = 8$. Então, a tabela verdade para $W$ deverá ter 3 colunas à esquerda e 8 linhas. Seguindo o procedimento dado acima, cria-se uma coluna, na qual listam-se os valores para $\overline{Z}$. Após, inicia-se a avaliação propriamente dita, a partir do nível mais interno de parêntesis. Como não há parêntesis na expressão, resolvem-se as subexpressões que envolvem a operação `E`. No caso em questão, há somente uma tal subexpressão, que é $Y \cdot \overline{Z}$. Então, cria-se uma coluna para $Y \cdot \overline{Z}$, na qual anotam-se os resultados para este produto. Finalmente, utilizam-se os resultados de $Y \cdot \overline{Z}$, listados na coluna anterior, para operar o `OU` com a variável $X$. Repare os passos descritos na tabela verdade que segue. Nela, os parêntesis em torno do produto $Y \cdot \overline{Z}$ indicam somente que este termo já foi avaliado e que no passo referente a esta coluna, tomaram-se apenas os valores previamente encontrados.        
 
 
-Para a expressão `W = X + Y × Z`, a tabela verdade é:
+Para a expressão $W = X + Y \cdot \overline{Z}$, a tabela verdade é:
 
-| X | Y | Z | Y × Z | W = X + (Y × Z) |
-|---|---|---|-------|-----------------|
-| 0 | 0 | 0 |   0   |        0        |
-| 0 | 0 | 1 |   0   |        0        |
-| 0 | 1 | 0 |   0   |        0        |
-| 0 | 1 | 1 |   1   |        1        |
-| 1 | 0 | 0 |   0   |        1        |
-| 1 | 0 | 1 |   0   |        1        |
-| 1 | 1 | 0 |   0   |        1        |
-| 1 | 1 | 1 |   1   |        1        |
+|  $X$  |  $Y$  |  $Z$  | $\overline{Z}$ | $Y \cdot \overline{Z}$ | $W = X + (Y \cdot \overline{Z})$ |
+| :---: | :---: | :---: | :------------: | :--------------------: | :------------------------------: |
+|   0   |   0   |   0   |       1        |           0            |                0                 |
+|   0   |   0   |   1   |       0        |           0            |                0                 |
+|   0   |   1   |   0   |       1        |           1            |                1                 |
+|   0   |   1   |   1   |       0        |           0            |                0                 |
+|   1   |   0   |   0   |       1        |           0            |                1                 |
+|   1   |   0   |   1   |       0        |           0            |                1                 |
+|   1   |   1   |   0   |       1        |           0            |                1                 |
+|   1   |   1   |   1   |       0        |           0            |                1                 |
 
-
+: Tabela verdade da expressão `W = X + Y × Z`
 
 ## Exercícios
 
 1. **Tabela Verdade para Operação OU**  
-        Construa a tabela verdade para a expressão Booleana `A + B + C + D`. Liste todas as combinações possíveis das variáveis de entrada e determine o resultado da operação.
+    Construa a tabela verdade para a expressão Booleana `A + B + C + D`. Liste todas as combinações possíveis das variáveis de entrada e determine o resultado da operação.
 
 2. **Tabela Verdade para Operação E**  
-        Dada a expressão `X × Y × Z`, crie a tabela verdade correspondente. Certifique-se de listar todas as combinações possíveis das variáveis de entrada e calcule o resultado da operação.
+    Dada a expressão `X × Y × Z`, crie a tabela verdade correspondente. Certifique-se de listar todas as combinações possíveis das variáveis de entrada e calcule o resultado da operação.
 
 3. **Complementação de Variáveis**  
-        Considere as variáveis Booleanas `A` e `B`. Determine os valores de saída para as expressões complementadas `¬A` e `¬B`. Em seguida, construa a tabela verdade para a expressão `¬A + ¬B`.
+    Considere as variáveis Booleanas `A` e `B`. Determine os valores de saída para as expressões complementadas `¬A` e `¬B`. Em seguida, construa a tabela verdade para a expressão `¬A + ¬B`.
 
 4. **Avaliação de Expressões Booleanas**  
-        Avalie a expressão `W = (A × B) + ¬C` e construa a tabela verdade correspondente. Certifique-se de seguir a ordem de precedência das operações e inclua colunas intermediárias para as subexpressões.
+    Avalie a expressão `W = (A × B) + ¬C` e construa a tabela verdade correspondente. Certifique-se de seguir a ordem de precedência das operações e inclua colunas intermediárias para as subexpressões.
 
 5. **Propriedades Associativa e Comutativa**  
-        Verifique as propriedades associativa e comutativa para a operação OU utilizando as expressões `(A + B) + C` e `(B + C) + A`. Construa a tabela verdade e compare os resultados para confirmar as propriedades.
+    Verifique as propriedades associativa e comutativa para a operação OU utilizando as expressões `(A + B) + C` e `(B + C) + A`. Construa a tabela verdade e compare os resultados para confirmar as propriedades.
 
 [Entrega](https://classroom.github.com/a/2gsprvty)
