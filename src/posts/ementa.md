@@ -57,6 +57,9 @@ Formas, estratégias, procedimentos e métodos, utilizados pelo(a)s docentes par
 ## Avaliação
 Ação de acompanhamento da aprendizagem do estudante e de reflexão do professor sobre sua prática. Envolve a aplicação de instrumentos, realização de observações, dentre outras possibilidades
 
+## Ferramentas
+
+- Logisim (ou logisim-evolution)
 
 ## Bibliografia básica:
 

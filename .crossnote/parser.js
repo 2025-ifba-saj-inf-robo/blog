@@ -21,7 +21,7 @@
       /```upmath\s*([\s\S]*?)```/g,
       (match, latex) => {
       const url = `http://i.upmath.me/svg/${encodeURIComponent(latex.trim())}`;
-      return `<p><img src="${url}" /></p>`;
+      return `<img src="${url}" />`;
       }
     );
     

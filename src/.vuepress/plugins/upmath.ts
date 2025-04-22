@@ -7,7 +7,7 @@ function encodeLatex(latex: string): string {
 
 function renderUpmathImage(latex: string): string {
   const url = `http://i.upmath.me/svg/${encodeLatex(latex)}`
-  return `<p><img src="${url}" /></p>\n`
+  return `<img src="${url}" />\n`
 }
 
 export const upmathPlugin = (): Plugin => ({
