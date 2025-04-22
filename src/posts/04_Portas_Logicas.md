@@ -607,13 +607,13 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
     \end{tikzpicture}
 
     ```
-
     @tab equação
 
-
+    <!--
     1. As entradas $A$ e $B$ passam por uma porta `OR`, resultando em $A + B$.
     2. As entradas $C$ e $D$ passam por outra porta `OR`, resultando em $C + D$.
     3. As saídas dessas duas portas `OR` são conectadas a uma porta `AND`, resultando em $S = (A + B) \cdot (C + D)$.
+    -->
 
     :::
 
@@ -665,11 +665,13 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
     ```
 
     @tab equação
-
+    
+    <!--
     1. As entradas $A$ e $B$ passam por uma porta `AND`, resultando em $A \cdot B$.
     2. A entrada $C$ passa por uma porta `NOT`, resultando em $\overline{C}$.
     3. As entradas $C$ e $D$ passam por uma porta `NAND`, resultando em $\overline{C \cdot D}$.
     4. As três saídas ($A \cdot B$, $\overline{C}$ e $\overline{C \cdot D}$) são conectadas a uma porta `OR`, resultando em $S = (A \cdot B) + \overline{C} + \overline{C \cdot D}$.
+    -->
 
     :::
 
@@ -702,12 +704,14 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
 
+    <!--
     1. As entradas $A$ e $C$ passam por uma porta `AND`, resultando em $A \cdot C$.
-    2. As entradas $A$ e $B$ passam por outra porta `AND`, resultando em $A \cdot B$.
-    3. As saídas dessas duas portas `AND` são conectadas a uma porta `OR`, resultando em $(A \cdot C) + (A \cdot B)$.
-    4. A entrada $C$ passa por uma porta `NOT`, resultando em $\overline{C}$.
-    5. As entradas $B$ e $\overline{C}$ passam por uma porta `AND`, resultando em $B \cdot \overline{C}$.
-    6. As saídas de $(A \cdot C) + (A \cdot B)$ e $B \cdot \overline{C}$ são conectadas a uma porta `AND`, resultando em $Y = \left[(A \cdot C) + (A \cdot B)\right] \cdot (B \cdot \overline{C})$.
+    1. As entradas $A$ e $B$ passam por outra porta `AND`, resultando em $A \cdot B$.
+    1.  As saídas dessas duas portas `AND` são conectadas a uma porta `OR`, resultando em $(A \cdot C) + (A \cdot B)$.
+    1.  A entrada $C$ passa por uma porta `NOT`, resultando em $\overline{C}$.
+    1.  As entradas $B$ e $\overline{C}$ passam por uma porta `AND`, resultando em $B \cdot \overline{C}$.
+    1. As saídas de $(A \cdot C) + (A \cdot B)$ e $B \cdot \overline{C}$ são conectadas a uma porta `AND`, resultando em $Y = \left[(A \cdot C) + (A \cdot B)\right] \cdot (B \cdot \overline{C})$.
+    -->
 
     :::
 
@@ -734,11 +738,13 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
 
+    <!--
     1. A entrada $A$ passa por uma porta `NOT`, resultando em $\overline{A}$.
-    2. As entradas $\overline{A}$, $B$ e $C$ passam por uma porta `AND`, resultando em $\overline{A} \cdot B \cdot C$.
-    3. As entradas $A$ e $D$ passam por uma porta `OR`, resultando em $A + D$.
-    4. A saída da porta `OR` passa por uma porta `NOT`, resultando em $\overline{A + D}$.
-    5. As saídas $\overline{A} \cdot B \cdot C$ e $\overline{A + D}$ passam por uma porta `AND`, resultando em $S = (\overline{A} \cdot B \cdot C) \cdot \overline{A + D}$.
+    1. As entradas $\overline{A}$, $B$ e $C$ passam por uma porta `AND`, resultando em $\overline{A} \cdot B \cdot C$.
+    1. As entradas $A$ e $D$ passam por uma porta `OR`, resultando em $A + D$.
+    1. A saída da porta `OR` passa por uma porta `NOT`, resultando em $\overline{A + D}$.
+    1. As saídas $\overline{A} \cdot B \cdot C$ e $\overline{A + D}$ passam por uma porta `AND`, resultando em $S = (\overline{A} \cdot B \cdot C) \cdot \overline{A + D}$.
+    -->
 
     :::
 
@@ -781,11 +787,13 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
 
+    <!--
     1. As entradas $A$ e $B$ passam por uma porta `OR`, resultando em $A + B$.
-    2. O resultado de $A + B$ e a entrada $C$ passam por uma porta `AND`, resultando em $(A + B) \cdot C$.
-    3. O resultado $(A + B) \cdot C$ passa por uma porta `NOT`, resultando em $\overline{(A + B) \cdot C}$.
-    4. O resultado $\overline{(A + B) \cdot C}$ e a entrada $D$ passam por uma porta `OR`, resultando em $\overline{(A + B) \cdot C} + D$.
-    5. O resultado $\overline{(A + B) \cdot C} + D$ e a entrada $E$ passam por uma porta `AND`, resultando em $S = \left( \overline{(A + B) \cdot C} + D \right) \cdot E$.
+    1. O resultado de $A + B$ e a entrada $C$ passam por uma porta `AND`, resultando em $(A + B) \cdot C$.
+    1. O resultado $(A + B) \cdot C$ passa por uma porta `NOT`, resultando em $\overline{(A + B) \cdot C}$.
+    1. O resultado $\overline{(A + B) \cdot C}$ e a entrada $D$ passam por uma porta `OR`, resultando em $\overline{(A + B) \cdot C} + D$.
+    1. O resultado $\overline{(A + B) \cdot C} + D$ e a entrada $E$ passam por uma porta `AND`, resultando em $S = \left( \overline{(A + B) \cdot C} + D \right) \cdot E$.
+    -->
 
     :::
 1. Determine o circuito definido por:
@@ -811,16 +819,16 @@ Esse método é chamado de **forma canônica de soma de produtos** (SOP, do ingl
 
 Considere a seguinte tabela verdade para três variáveis ($A$, $B$, $C$):
 
-| A | B | C | S |
-|---|---|---|---|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
+| A   | B   | C   | S   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 1   |
+| 0   | 1   | 0   | 1   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
+| 1   | 1   | 1   | 1   |
 
 As linhas em que $S = 1$ são:
 
@@ -840,16 +848,207 @@ Na prática, esse é o método mais comum para projetar circuitos lógicos a par
 
 
 #### Exercício
-1. Obtenha  a  expressão  que  executa  a  tabela  verdade  a seguir e desenhe o circuito lógic
+1. Obtenha a expressão que executa a tabela verdade a seguir e desenhe o circuito lógico
 
-| A | B | S |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
+| A   | B   | S   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
 
 ### Ou exclusivo
+
+A porta lógica **OU exclusivo** (XOR, do inglês *exclusive OR*) realiza uma operação lógica especial: sua saída é 1 se, e somente se, o número de entradas em nível lógico 1 for ímpar (no caso de duas entradas, se as entradas forem diferentes). Para duas entradas $A$ e $B$, a saída $S$ é 1 apenas quando $A \neq B$.
+
+O símbolo da porta XOR é semelhante ao da porta OR, mas com uma linha adicional na entrada.
+
+<figure>
+
+```upmath
+\usetikzlibrary {circuits.logic.US}
+\begin{tikzpicture}[circuit logic US]
+  \matrix[column sep=5mm]
+  {
+   \node (i0) {A}; &                            & \\
+              & \node [xor gate US, draw] (a1) {};  &  \node (out) {$A \oplus B$}; \\
+   \node (i1) {B}; &                            & \\
+  };
+  \draw (i0.east) -- ++(right:3mm) |- (a1.input 1);
+  \draw (i1.east) -- ++(right:3mm) |- (a1.input 2);
+  \draw (a1.output) -- ++(right:2mm) |- (out.west);
+\end{tikzpicture}
+```
+
+<figcaption>Símbolo da porta lógica XOR (OU exclusivo) com 2 entradas.</figcaption>
+</figure>
+
+A tabela verdade da porta XOR para duas entradas é:
+
+
+
+|   A   |   B   | $S = A \oplus B$ |
+| :---: | :---: | :--------------: |
+|   0   |   0   |        0         |
+|   0   |   1   |        1         |
+|   1   |   0   |        1         |
+|   1   |   1   |        0         |
+
+A expressão booleana para a porta XOR de duas entradas é:
+$$
+S = (A \cdot \overline{B}) + (\overline{A} \cdot B)
+$$
+
+A porta XOR é muito utilizada em circuitos de soma, comparadores e sistemas onde é necessário detectar diferenças entre sinais.
+
+<figure>
+
+```plantuml {kroki=true}
+@startuml
+robust "A" as S1
+robust "B" as S2
+binary "Saída" as S3
+
+@0
+S1 is 0
+S2 is 0
+S3 is 0
+
+@1
+S1 is 1
+S3 is 1
+
+@2
+S2 is 1
+S3 is 0
+
+@3
+S1 is 0
+S3 is 1
+
+@enduml
+```
+
+<figcaption>Funcionamento da porta XOR com o sinal variando com o tempo</figcaption>
+</figure>
+
+<figure>
+
+```upmath
+\ctikzset{logic ports=ieee, logic ports/fill=gray!30}
+\begin{circuitikz}
+    \node [and port,scale=2](and1) at (0,0) {};
+    \node (labelA) at (-6,0.55) {A};
+    \draw (and1.in 2) -- ++(-3.5,0) node[left](labelB){B};
+    \draw (labelA.east) -- ++(1,0) to[inline not] ++(2,0) -- (and1.in 1);
+    \node [and port,scale=2](and2) at (0,-4) {};
+    \draw (labelA.east) ++(0.5,0) node[circ]{} |- (and2.in 1);
+    \draw (labelB.east) ++(0.3,0) node[circ]{} -- ++(0,-4)
+    to[inline not] ++(2,0) -- (and2.in 2) ;
+    \node [or port,scale=2](or1) at (6,-2) {};
+    \draw (and1.out) -- (or1.in 1);
+    \draw (and2.out) -- (or1.in 2);
+\end{circuitikz}
+```
+
+<figcaption>Implementação detalhada da porta XOR (OU exclusivo) usando portas AND, OR e NOT.</figcaption>
+</figure>
+
+### Não OU exclusivo
+
+A porta lógica **NÃO OU exclusivo** (XNOR, do inglês *exclusive NOR*) realiza a operação inversa da porta XOR. Sua saída é 1 se, e somente se, o número de entradas em nível lógico 1 for par (no caso de duas entradas, se as entradas forem iguais). Para duas entradas $A$ e $B$, a saída $S$ é 1 apenas quando $A = B$.
+
+O símbolo da porta XNOR é semelhante ao da porta XOR, mas com um pequeno círculo na saída, indicando a negação.
+
+<figure>
+
+```upmath
+\usetikzlibrary {circuits.logic.US}
+\begin{tikzpicture}[circuit logic US]
+  \matrix[column sep=5mm]
+  {
+   \node (i0) {A}; &                            & \\
+              & \node [xnor gate US, draw] (a1) {};  &  \node (out) {$A \odot B$}; \\
+   \node (i1) {B}; &                            & \\
+  };
+  \draw (i0.east) -- ++(right:3mm) |- (a1.input 1);
+  \draw (i1.east) -- ++(right:3mm) |- (a1.input 2);
+  \draw (a1.output) -- ++(right:2mm) |- (out.west);
+\end{tikzpicture}
+```
+
+<figcaption>Símbolo da porta lógica XNOR (NÃO OU exclusivo) com 2 entradas.</figcaption>
+</figure>
+
+A tabela verdade da porta XNOR para duas entradas é:
+
+|   A   |   B   | $S = A \odot B$ |
+| :---: | :---: | :-------------: |
+|   0   |   0   |        1        |
+|   0   |   1   |        0        |
+|   1   |   0   |        0        |
+|   1   |   1   |        1        |
+
+A expressão booleana para a porta XNOR de duas entradas é:
+$$
+S = (A \cdot B) + (\overline{A} \cdot \overline{B})
+$$
+
+A porta XNOR é utilizada em comparadores de igualdade e circuitos onde é necessário detectar se dois sinais são iguais.
+
+<figure>
+
+```plantuml {kroki=true}
+@startuml
+robust "A" as S1
+robust "B" as S2
+binary "Saída" as S3
+
+@0
+S1 is 0
+S2 is 0
+S3 is 1
+
+@1
+S1 is 1
+S3 is 0
+
+@2
+S2 is 1
+S3 is 1
+
+@3
+S1 is 0
+S3 is 0
+
+@enduml
+```
+
+<figcaption>Funcionamento da porta XNOR com o sinal variando com o tempo</figcaption>
+</figure>
+
+<figure>
+
+```upmath
+\ctikzset{logic ports=ieee, logic ports/fill=gray!30}
+\begin{circuitikz}
+    \node [and port,scale=2](and1) at (0,0) {};
+    \node (labelA) at (-6,0.55) {A};
+    \draw (and1.in 2) -- ++(-3.5,0) node[left](labelB){B};
+    \draw (labelA.east) -- ++(1,0) -- (and1.in 1);
+    \node [and port,scale=2](and2) at (0,-4) {};
+    \draw (labelA.east) ++(0.5,0) node[circ]{} -- ++(0,-4)
+    to[inline not] ++(2,0) -- (and2.in 1);
+    \draw (labelB.east) ++(0.3,0) node[circ]{} -- ++(0,-4)
+    to[inline not] ++(2,0) -- (and2.in 2) ;
+    \node [or port,scale=2](or1) at (6,-2) {};
+    \draw (and1.out) -- (or1.in 1);
+    \draw (and2.out) -- (or1.in 2);
+\end{circuitikz}
+```
+
+<figcaption>Implementação detalhada da porta XNOR (NÃO OU exclusivo) usando portas AND, OR e NOT.</figcaption>
+</figure>
 
 
 
