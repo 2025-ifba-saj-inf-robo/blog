@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: pen-to-square
 date: 2025-04-01 7:40:00.00 -3
 category:
   - aula

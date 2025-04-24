@@ -1,10 +1,10 @@
 ---
-icon: edit  
+icon: pen-to-square  
 date: 2025-04-24 14:00:00.00 -3
 category:
     - aula
     - teoria
-order: 5
+order: 6
 ---
 
 # Circuitos Combinacionais
@@ -137,10 +137,13 @@ As saídas:
 
 ### Equações Booleanas
 
-- $S_1 = A$
+- $S_1 = (A \cdot \overline{B}) + ( A \cdot B )$
+    - $S_1 = A ( \overline{B} + B )$
+    - $S_1 = A \cdot 1$
+    - $S_1 = A$
 - $S_2 = \overline{A} \cdot B$
 
-### Diagrama do Circuito
+<figure>
 
 ```upmath
 \ctikzset{logic ports=ieee, logic ports/fill=gray!30}
@@ -154,3 +157,8 @@ As saídas:
     \draw (labelA.east) -- ++(5,0) node[right, red](labelS2){$S_1$};
 \end{circuitikz}
 ```
+
+<figcaption>Circuito para controlar semáforo</figcaption>
+
+</figure>
+

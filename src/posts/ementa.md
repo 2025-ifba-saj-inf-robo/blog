@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: pen-to-square
 date: 2025-03-31 7:40:00.00 -3
 tag:
   - ementa
