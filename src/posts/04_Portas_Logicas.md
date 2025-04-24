@@ -4,7 +4,6 @@ date: 2025-04-22 10:20:00.00 -3
 category:  
   - aula  
   - exercicio  
-  - entrega
 order: 4
 ---  
 
@@ -405,44 +404,9 @@ Dada uma equação Booleana qualquer, é possível desenhar o circuito lógico c
 
 Por exemplo, considere um sistema de controle industrial, onde sensores de temperatura e pressão monitoram um processo químico. Os sinais desses sensores são comparados com valores de referência, e se qualquer um dos parâmetros ultrapassar o limite, um alarme é acionado. O circuito lógico desse sistema pode ser representado como segue:
 
-<figure>
 
-```upmath
-\usetikzlibrary {circuits.logic.US}
-\begin{tikzpicture}[circuit logic US]
-% Desenha os blocos
-\node[draw, rectangle] (tempTransducer) at (0, 2) {
-   \begin{tabular}{c}
-      Transdutor de  \\ 
-      temperatura
-   \end{tabular}
-};
-\node[draw, rectangle] (pressureTransducer) at (0, 0) {
-   \begin{tabular}{c}
-      Transdutor de  \\ 
-      pressão
-   \end{tabular}
-};
-\node[draw, rectangle] (tempComparator) at (4, 2) {Comparador};
-\node[draw, rectangle] (pressureComparator) at (4, 0) {Comparador};
-\node[or gate] (orGate) at (6, 1) {};
-\node[draw, rectangle] (alarm) at (8, 1) {Alarme};
-\draw[dashed] (-2, -1) rectangle (2, 3);
-\node at (-0.2, -0.8) {Processo químico};
-\draw[->] (tempTransducer) -- node[above] {$V_T$} (tempComparator);
-\draw[->] (pressureTransducer) -- node[above] {$V_P$} (pressureComparator);
-\draw[->] (tempComparator.east) -- ++(right:3mm) |-  node[above] {$T_H$} (orGate.input 1) ;
-\draw[->] (pressureComparator.east) -- ++(right:3mm) |- node[below] {$P_H$} (orGate.input 2);
-\draw[->] (orGate.output) -- (alarm.west);
-\node (VTR) at (2.5, 1) {$V_{TR}$};
-\draw[->] (VTR) --  (tempComparator);
-\node (VPR) at (2.5, -1) {$V_{PR}$};
-\draw[->] (VPR) --  (pressureComparator);
-\end{tikzpicture}
-```
+![Circuito lógico para um sistema de controle de uma planta industrial](./excalidraw/processoQuimico-animate.svg)
 
-<figcaption>Circuito lógico para um sistema de controle de uma planta industrial</figcaption>
-</figure>
 
 Para desenhar um circuito lógico a partir de uma equação Booleana, siga estes passos:
 
@@ -609,11 +573,11 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
     ```
     @tab equação
 
-    <!--
+    
     1. As entradas $A$ e $B$ passam por uma porta `OR`, resultando em $A + B$.
     2. As entradas $C$ e $D$ passam por outra porta `OR`, resultando em $C + D$.
     3. As saídas dessas duas portas `OR` são conectadas a uma porta `AND`, resultando em $S = (A + B) \cdot (C + D)$.
-    -->
+    
 
     :::
 
@@ -666,12 +630,12 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
     
-    <!--
+    
     1. As entradas $A$ e $B$ passam por uma porta `AND`, resultando em $A \cdot B$.
     2. A entrada $C$ passa por uma porta `NOT`, resultando em $\overline{C}$.
     3. As entradas $C$ e $D$ passam por uma porta `NAND`, resultando em $\overline{C \cdot D}$.
     4. As três saídas ($A \cdot B$, $\overline{C}$ e $\overline{C \cdot D}$) são conectadas a uma porta `OR`, resultando em $S = (A \cdot B) + \overline{C} + \overline{C \cdot D}$.
-    -->
+    
 
     :::
 
@@ -681,6 +645,7 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     ```upmath
     \ctikzset{logic ports=ieee, logic ports/fill=gray!30}
+    \tikzset{small inline not/.style={inline not, /tikz/circuitikz/logic ports/scale=0.5}}
     \begin{circuitikz}
         \node [and port](and1) at (0,0) {};
         \draw (and1.in 1) -- ++(-3,0) node[left, red](labelA){A};
@@ -691,7 +656,7 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
         \node [and port](and3) at (0,-4) {};
         \draw (labelB.east) ++(0.5,0) node[circ]{} |- (and3.in 1);
         \draw (labelC.east) ++(1,0) node[circ]{} -- ++(0,-4)
-        to[inline not] ++(2,0);
+        to[small inline not] ++(2,0);
         \node [or port](or1) at (3,-1) {};
         \draw (and1.out) -- (or1.in 1);
         \draw (and2.out) -- (or1.in 2);
@@ -699,19 +664,19 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
         \draw (or1.out) -- (and4.in 1);
         \draw (and3.out) -- (and4.in 2);
         \draw (and4.out) -- ++(0.5,0) node[right, red](labelY){Y};
-    \end{circuitikz}
+    \end{circuitikz}    
     ```
 
     @tab equação
 
-    <!--
+    
     1. As entradas $A$ e $C$ passam por uma porta `AND`, resultando em $A \cdot C$.
     1. As entradas $A$ e $B$ passam por outra porta `AND`, resultando em $A \cdot B$.
     1.  As saídas dessas duas portas `AND` são conectadas a uma porta `OR`, resultando em $(A \cdot C) + (A \cdot B)$.
     1.  A entrada $C$ passa por uma porta `NOT`, resultando em $\overline{C}$.
     1.  As entradas $B$ e $\overline{C}$ passam por uma porta `AND`, resultando em $B \cdot \overline{C}$.
     1. As saídas de $(A \cdot C) + (A \cdot B)$ e $B \cdot \overline{C}$ são conectadas a uma porta `AND`, resultando em $Y = \left[(A \cdot C) + (A \cdot B)\right] \cdot (B \cdot \overline{C})$.
-    -->
+    
 
     :::
 
@@ -738,13 +703,13 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
 
-    <!--
+    
     1. A entrada $A$ passa por uma porta `NOT`, resultando em $\overline{A}$.
     1. As entradas $\overline{A}$, $B$ e $C$ passam por uma porta `AND`, resultando em $\overline{A} \cdot B \cdot C$.
     1. As entradas $A$ e $D$ passam por uma porta `OR`, resultando em $A + D$.
     1. A saída da porta `OR` passa por uma porta `NOT`, resultando em $\overline{A + D}$.
     1. As saídas $\overline{A} \cdot B \cdot C$ e $\overline{A + D}$ passam por uma porta `AND`, resultando em $S = (\overline{A} \cdot B \cdot C) \cdot \overline{A + D}$.
-    -->
+    
 
     :::
 
@@ -787,336 +752,19 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
 
     @tab equação
 
-    <!--
+    
     1. As entradas $A$ e $B$ passam por uma porta `OR`, resultando em $A + B$.
     1. O resultado de $A + B$ e a entrada $C$ passam por uma porta `AND`, resultando em $(A + B) \cdot C$.
     1. O resultado $(A + B) \cdot C$ passa por uma porta `NOT`, resultando em $\overline{(A + B) \cdot C}$.
     1. O resultado $\overline{(A + B) \cdot C}$ e a entrada $D$ passam por uma porta `OR`, resultando em $\overline{(A + B) \cdot C} + D$.
     1. O resultado $\overline{(A + B) \cdot C} + D$ e a entrada $E$ passam por uma porta `AND`, resultando em $S = \left( \overline{(A + B) \cdot C} + D \right) \cdot E$.
-    -->
+    
 
     :::
+
 1. Determine o circuito definido por:
    - $X = A \cdot B \cdot C$ 
    - $X = A + \overline{B}$
    - $X = A \cdot C + B \cdot \overline{C} + \overline{A} \cdot B \cdot C$ 
    - $S = A \cdot B \cdot C + ( A + B ) \cdot C$ 
-
-### Expressões booleana pela Tabela Verdade
-
-Podemos, ainda, obter expressões booleanas e circuitos lógicos a partir de tabelas verdade. Esse método é fundamental, pois, em muitos casos práticos, o comportamento desejado de um sistema digital é especificado diretamente por uma tabela verdade, que relaciona todas as possíveis combinações de entradas com as saídas correspondentes.
-
-O procedimento consiste em analisar a tabela verdade e identificar todas as linhas em que a saída desejada é igual a 1 (verdadeira). Para cada uma dessas linhas, constrói-se um termo lógico (produto) que representa aquela combinação específica de entradas. Em seguida, todos esses termos são somados (adição lógica, OU) para formar a expressão booleana completa.
-
-1. **Liste todas as combinações de entrada:** Monte a tabela verdade com todas as possíveis combinações das variáveis de entrada.
-2. **Identifique as linhas com saída 1:** Observe em quais linhas a saída é igual a 1.
-3. **Monte um termo para cada linha:** Para cada linha com saída 1, escreva um termo AND (produto) usando as variáveis de entrada. Se a variável for 1, use-a normalmente; se for 0, use seu complemento (negação).
-4. **Some todos os termos:** A expressão booleana final será a soma (OR) de todos os termos obtidos.
-
-Esse método é chamado de **forma canônica de soma de produtos** (SOP, do inglês Sum of Products).
-
-#### Exemplo
-
-Considere a seguinte tabela verdade para três variáveis ($A$, $B$, $C$):
-
-| A   | B   | C   | S   |
-| --- | --- | --- | --- |
-| 0   | 0   | 0   | 0   |
-| 0   | 0   | 1   | 1   |
-| 0   | 1   | 0   | 1   |
-| 0   | 1   | 1   | 0   |
-| 1   | 0   | 0   | 1   |
-| 1   | 0   | 1   | 0   |
-| 1   | 1   | 0   | 0   |
-| 1   | 1   | 1   | 1   |
-
-As linhas em que $S = 1$ são:
-
-- (0, 0, 1): $A' \cdot B' \cdot C$
-- (0, 1, 0): $A' \cdot B \cdot C'$
-- (1, 0, 0): $A \cdot B' \cdot C'$
-- (1, 1, 1): $A \cdot B \cdot C$
-
-A expressão booleana será:
-$$
-S = A'B'C + A'BC' + AB'C' + ABC
-$$
-
-### Aplicação prática
-
-Na prática, esse é o método mais comum para projetar circuitos lógicos a partir de requisitos funcionais, pois permite partir diretamente do comportamento desejado (tabela verdade) para a implementação física (circuito lógico). Após obter a expressão, pode-se simplificá-la usando as leis da álgebra Booleana, tornando o circuito mais eficiente.
-
-
-#### Exercício
-1. Obtenha a expressão que executa a tabela verdade a seguir e desenhe o circuito lógico
-
-| A   | B   | S   |
-| --- | --- | --- |
-| 0   | 0   | 0   |
-| 0   | 1   | 1   |
-| 1   | 0   | 1   |
-| 1   | 1   | 0   |
-
-### Ou exclusivo
-
-A porta lógica **OU exclusivo** (XOR, do inglês *exclusive OR*) realiza uma operação lógica especial: sua saída é 1 se, e somente se, o número de entradas em nível lógico 1 for ímpar (no caso de duas entradas, se as entradas forem diferentes). Para duas entradas $A$ e $B$, a saída $S$ é 1 apenas quando $A \neq B$.
-
-O símbolo da porta XOR é semelhante ao da porta OR, mas com uma linha adicional na entrada.
-
-<figure>
-
-```upmath
-\usetikzlibrary {circuits.logic.US}
-\begin{tikzpicture}[circuit logic US]
-  \matrix[column sep=5mm]
-  {
-   \node (i0) {A}; &                            & \\
-              & \node [xor gate US, draw] (a1) {};  &  \node (out) {$A \oplus B$}; \\
-   \node (i1) {B}; &                            & \\
-  };
-  \draw (i0.east) -- ++(right:3mm) |- (a1.input 1);
-  \draw (i1.east) -- ++(right:3mm) |- (a1.input 2);
-  \draw (a1.output) -- ++(right:2mm) |- (out.west);
-\end{tikzpicture}
-```
-
-<figcaption>Símbolo da porta lógica XOR (OU exclusivo) com 2 entradas.</figcaption>
-</figure>
-
-A tabela verdade da porta XOR para duas entradas é:
-
-
-
-|   A   |   B   | $S = A \oplus B$ |
-| :---: | :---: | :--------------: |
-|   0   |   0   |        0         |
-|   0   |   1   |        1         |
-|   1   |   0   |        1         |
-|   1   |   1   |        0         |
-
-A expressão booleana para a porta XOR de duas entradas é:
-$$
-S = (A \cdot \overline{B}) + (\overline{A} \cdot B)
-$$
-
-A porta XOR é muito utilizada em circuitos de soma, comparadores e sistemas onde é necessário detectar diferenças entre sinais.
-
-<figure>
-
-```plantuml {kroki=true}
-@startuml
-robust "A" as S1
-robust "B" as S2
-binary "Saída" as S3
-
-@0
-S1 is 0
-S2 is 0
-S3 is 0
-
-@1
-S1 is 1
-S3 is 1
-
-@2
-S2 is 1
-S3 is 0
-
-@3
-S1 is 0
-S3 is 1
-
-@enduml
-```
-
-<figcaption>Funcionamento da porta XOR com o sinal variando com o tempo</figcaption>
-</figure>
-
-<figure>
-
-```upmath
-\ctikzset{logic ports=ieee, logic ports/fill=gray!30}
-\begin{circuitikz}
-    \node [and port,scale=2](and1) at (0,0) {};
-    \node (labelA) at (-6,0.55) {A};
-    \draw (and1.in 2) -- ++(-3.5,0) node[left](labelB){B};
-    \draw (labelA.east) -- ++(1,0) to[inline not] ++(2,0) -- (and1.in 1);
-    \node [and port,scale=2](and2) at (0,-4) {};
-    \draw (labelA.east) ++(0.5,0) node[circ]{} |- (and2.in 1);
-    \draw (labelB.east) ++(0.3,0) node[circ]{} -- ++(0,-4)
-    to[inline not] ++(2,0) -- (and2.in 2) ;
-    \node [or port,scale=2](or1) at (6,-2) {};
-    \draw (and1.out) -- (or1.in 1);
-    \draw (and2.out) -- (or1.in 2);
-\end{circuitikz}
-```
-
-<figcaption>Implementação detalhada da porta XOR (OU exclusivo) usando portas AND, OR e NOT.</figcaption>
-</figure>
-
-### Não OU exclusivo
-
-A porta lógica **NÃO OU exclusivo** (XNOR, do inglês *exclusive NOR*) realiza a operação inversa da porta XOR. Sua saída é 1 se, e somente se, o número de entradas em nível lógico 1 for par (no caso de duas entradas, se as entradas forem iguais). Para duas entradas $A$ e $B$, a saída $S$ é 1 apenas quando $A = B$.
-
-O símbolo da porta XNOR é semelhante ao da porta XOR, mas com um pequeno círculo na saída, indicando a negação.
-
-<figure>
-
-```upmath
-\usetikzlibrary {circuits.logic.US}
-\begin{tikzpicture}[circuit logic US]
-  \matrix[column sep=5mm]
-  {
-   \node (i0) {A}; &                            & \\
-              & \node [xnor gate US, draw] (a1) {};  &  \node (out) {$A \odot B$}; \\
-   \node (i1) {B}; &                            & \\
-  };
-  \draw (i0.east) -- ++(right:3mm) |- (a1.input 1);
-  \draw (i1.east) -- ++(right:3mm) |- (a1.input 2);
-  \draw (a1.output) -- ++(right:2mm) |- (out.west);
-\end{tikzpicture}
-```
-
-<figcaption>Símbolo da porta lógica XNOR (NÃO OU exclusivo) com 2 entradas.</figcaption>
-</figure>
-
-A tabela verdade da porta XNOR para duas entradas é:
-
-|   A   |   B   | $S = A \odot B$ |
-| :---: | :---: | :-------------: |
-|   0   |   0   |        1        |
-|   0   |   1   |        0        |
-|   1   |   0   |        0        |
-|   1   |   1   |        1        |
-
-A expressão booleana para a porta XNOR de duas entradas é:
-$$
-S = (A \cdot B) + (\overline{A} \cdot \overline{B})
-$$
-
-A porta XNOR é utilizada em comparadores de igualdade e circuitos onde é necessário detectar se dois sinais são iguais.
-
-<figure>
-
-```plantuml {kroki=true}
-@startuml
-robust "A" as S1
-robust "B" as S2
-binary "Saída" as S3
-
-@0
-S1 is 0
-S2 is 0
-S3 is 1
-
-@1
-S1 is 1
-S3 is 0
-
-@2
-S2 is 1
-S3 is 1
-
-@3
-S1 is 0
-S3 is 0
-
-@enduml
-```
-
-<figcaption>Funcionamento da porta XNOR com o sinal variando com o tempo</figcaption>
-</figure>
-
-<figure>
-
-```upmath
-\ctikzset{logic ports=ieee, logic ports/fill=gray!30}
-\begin{circuitikz}
-    \node [and port,scale=2](and1) at (0,0) {};
-    \node (labelA) at (-6,0.55) {A};
-    \draw (and1.in 2) -- ++(-3.5,0) node[left](labelB){B};
-    \draw (labelA.east) -- ++(1,0) -- (and1.in 1);
-    \node [and port,scale=2](and2) at (0,-4) {};
-    \draw (labelA.east) ++(0.5,0) node[circ]{} -- ++(0,-4)
-    to[inline not] ++(2,0) -- (and2.in 1);
-    \draw (labelB.east) ++(0.3,0) node[circ]{} -- ++(0,-4)
-    to[inline not] ++(2,0) -- (and2.in 2) ;
-    \node [or port,scale=2](or1) at (6,-2) {};
-    \draw (and1.out) -- (or1.in 1);
-    \draw (and2.out) -- (or1.in 2);
-\end{circuitikz}
-```
-
-<figcaption>Implementação detalhada da porta XNOR (NÃO OU exclusivo) usando portas AND, OR e NOT.</figcaption>
-</figure>
-
-
-
-## Leis Fundamentais e Propriedades da Álgebra Booleana 
-
-A álgebra Booleana é regida por um conjunto de leis e propriedades que definem o comportamento das variáveis e operações lógicas. Essas leis são fundamentais para simplificar expressões e projetar circuitos eficientes.
-
-Sejam $A$ e $B$ duas variáveis Booleanas. O espaço Booleano é definido por:
-
-::: info
-se $A \neq 0$, então $A = 1$
-
-se $A \neq 1$, então $A = 0$
-:::
-
-As operações elementares são: **OU** (adição lógica), **E** (multiplicação lógica) e **complementação** (negação). As principais propriedades são:
-
-- **Adição lógica (OU):**  
-  $$
-  \begin{align}
-  A + 0 = A \\
-  A + 1 = 1 \\
-  A + A = A \\
-  A + \overline{A} = 1
-  \end{align}
-  $$
-
-- **Multiplicação lógica (E):**  
-  $$
-  \begin{align}
-  A \cdot 0 = 0 \\
-  A \cdot 1 = A \\
-  A \cdot A = A \\
-  A \cdot \overline{A} = 0
-  \end{align}
-  $$
-
-- **Complementação:**  
-  $$
-  \begin{align}
-  \overline{\overline{A}} = A
-  \end{align}
-  $$
-
-- **Comutatividade:**  
-  $$
-  \begin{align}
-  A + B = B + A \\
-  A \cdot B = B \cdot A
-  \end{align}
-  $$
-
-- **Associatividade:**  
-  $$
-  \begin{align}
-  A + (B + C) = (A + B) + C = (A + C) + B \\
-  A \cdot (B \cdot C) = (A \cdot B) \cdot C = (A \cdot C) \cdot B
-  \end{align}
-  $$
-
-- **Distributiva:**  
-  $$
-  \begin{align}
-  A \cdot (B + C) = A \cdot B + A \cdot C
-  \end{align}
-  $$
-
-Essas leis permitem manipular e simplificar expressões Booleanas, facilitando o projeto de circuitos lógicos mais simples e eficientes.
-
-
 
