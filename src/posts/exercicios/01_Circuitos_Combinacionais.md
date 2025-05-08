@@ -6,7 +6,7 @@ category:
 order: 1
 ---
 
-# Exercícios 
+# Lista de Exercícios – Circuitos Combinacionais 1
 
 1. **Projeto de Circuito Lógico para Controle de Bomba e Eletroválvula em um Sistema de Abastecimento**
 
@@ -58,8 +58,8 @@ order: 1
 
    1. Qual é a equação lógica do sinal de saída do circuito lógico?  
 
-      A) S = A.B.C + M  
-      B) S = A.B.C.M  
-      C) S = (A + B + C)M  
-      D) S = A + B + C + M  
-      E) S = (A + B + C)M  
+      A) $ S = A.B.C + \overline{M} $
+      B) $ S = A.B.C.M  $
+      C) $ S = (A + B + C)M  $
+      D) $ S = A + B + C + M  $
+      E) $ S = (A + B + C)\overline{M}  $
