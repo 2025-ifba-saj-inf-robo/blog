@@ -17,9 +17,16 @@ O estudo da robótica e o desenvolvimento de projetos exigem que saibamos como o
 
 Ao elaborarmos projetos em robótica, é importante saber sobre a tensão a ser aplicada no circuito, bem como qual corrente elétrica deverá passar por este circuito. Do contrário, poderá ocorrer uma sobrecarga no circuito elétrico, danificando os componentes utilizados.
 
-> **Eletrônica é o controle de movimento dos elétrons, controle da corrente elétrica**
->
-> **Circuito = Fonte + Condutores + Carga**
+A eletrônica é o ramo da física e da engenharia que estuda e utiliza o comportamento dos elétrons em materiais, principalmente em semicondutores e condutores, para criar, controlar e manipular sinais elétricos. Ao controlar o movimento dos elétrons, é possível desenvolver circuitos capazes de realizar funções como amplificação, processamento, armazenamento e transmissão de informações. Esse controle é feito por meio de componentes eletrônicos, como resistores, capacitores, transistores e diodos, que direcionam, limitam ou modificam o fluxo da corrente elétrica conforme a necessidade do circuito. Assim, a eletrônica está presente em praticamente todos os dispositivos modernos, desde simples controles remotos até computadores e robôs complexos, permitindo o funcionamento eficiente e seguro desses sistemas.
+
+::: tip Eletrônica
+Eletrônica é o controle de movimento dos elétrons, controle da corrente elétrica.
+:::
+
+
+::: tip Circuito
+Circuito = Fonte + Condutores + Carga
+:::
 
 Vamos iniciar compreendendo o que é uma corrente elétrica?
 
@@ -175,7 +182,9 @@ Materiais como alumínio, ouro, potássio, mercúrio e gases ionizados são cond
 
 Imagine que você está correndo ao redor da escola. Ao correr alguns metros, há elementos que podem se colocar "contra" o seu movimento: a direção do vento, a aderência de seu tênis ao solo, o conforto térmico, o controle da respiração, dentre outros. No caso da eletricidade, quando um elétron se movimenta, ele sofre uma força contrária em seu caminho, que é a resistência elétrica (veremos, na sequência, um pouco mais sobre o tema). Isto está relacionado, por exemplo, à espessura do fio ou cabo utilizado (sua dimensão poderá definir maior ou menor resistência elétrica) ou mesmo ao material que estiver em contato com a corrente elétrica, como a cerâmica ou o plástico, que são materiais isolantes e dificultam a movimentação dos elétrons.
 
-> **A tensão é a força que coloca os elétrons em movimento, ou seja, a força que cria a corrente elétrica.**
+::: tip Tensão
+A tensão é a força que coloca os elétrons em movimento, ou seja, a força que cria a corrente elétrica.
+:::
 
 Como vimos, nos condutores a corrente elétrica é gerada pela movimentação ordenada dos elétrons. Por possuírem cargas de sinal negativo, tendem a seguir em direção ao maior potencial, que é o polo positivo. Esse é o sentido real da corrente elétrica - fluxo de elétrons do polo negativo para o polo positivo.
 
@@ -237,7 +246,11 @@ De grande relevância histórica e variados aspectos técnicos, o filme [“A Ba
 
 A tensão elétrica é a grandeza física que representa a diferença de potencial elétrico entre dois pontos de um circuito, determinando a quantidade de energia a ser fornecida ao circuito, permitindo, assim, o funcionamento de um equipamento ou artefato elétrico.
 
-> **força - funcionamento**
+A tensão elétrica é a força que impulsiona os elétrons a se moverem em um circuito, criando a corrente elétrica. Ela é medida em volts (V) e pode ser gerada por diferentes fontes, como baterias, pilhas, geradores e tomadas elétricas.
+
+::: tip tensão
+força - funcionamento
+:::
 
 Como um primeiro exemplo de artefato elétrico, podemos pensar na lâmpada incandescente, pois a diferença de potencial elétrico nas extremidades de seu filamento determinará sua luminosidade (atualmente, é mais comum o uso de lâmpadas de LED por conta de sua eficiência energética para iluminação, pois a lâmpada incandescente gera mais calor que luz). Outro exemplo que temos são os fornos elétricos, pois os filamentos que assarão as comidas são aquecidos pela transição de elétrons em barras de metal que apresentam resistência a eles - e a resistência, como veremos mais à frente, gera calor!
 
