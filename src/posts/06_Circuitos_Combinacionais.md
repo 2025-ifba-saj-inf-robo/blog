@@ -152,7 +152,7 @@ As saídas:
     \node (labelA) at (7.35,0.28) {$A$};
     \node [and port](and2) at (12,-2) {};
     \draw (and2.in 2) -- ++(-3,0) node[left](labelB){$B$};
-    \draw (labelA.east) ++(1,0) node[circ]{} -- ++(0,-2) to[small inline not] ++(2,0);
+    \draw (labelA.east) ++(1,0) node[circ]{} -- ++(0,-2) to[small inline not] (and2.in 1);
     \draw (and2.out) -- ++(0.5,0) node[right, red](labelS1){$S_2$};
     \draw (labelA.east) -- ++(5,0) node[right, red](labelS2){$S_1$};
 \end{circuitikz}
