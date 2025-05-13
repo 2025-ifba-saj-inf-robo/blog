@@ -4,7 +4,6 @@ date: 2025-04-24 13:00:00.00 -3
 category:  
   - aula  
   - exercicio  
-  - entrega
 order: 5
 ---  
 
