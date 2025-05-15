@@ -1,0 +1,253 @@
+
+GOVERNADOR DO ESTADO DO PARANÁ
+Carlos Massa Ratinho Júnior
+SECRETÁRIO DE ESTADO DA EDUCAÇÃO
+Renato Feder
+DIRETOR DE TECNOLOGIA E INOVAÇÃO
+Andre Gustavo Souza Garbosa
+COORDENADOR DE TECNOLOGIAS EDUCACIONAIS
+Marcelo Gasparin
+Produção de Conteúdo
+Cleiton Rosa
+Simone Sinara de Souza
+Revisão Textual
+Adilson Carlos Batista
+Leitura Crítica e Normalização Bibliográfica
+Ricardo Hasper
+Projeto Gráfico e Diagramação
+Edna do Rocio Becker
+Ilustração
+Jocelin Vianna (Educa Play)
+2021
+
+SumárioIntrodução 2
+Objetivos desta Aula 2
+Competências Gerais Previstas na BNCC 3
+Habilidades do Século XXI a Serem Desenvolvidas 4
+Roteiro da Aula 4
+1. Contextualização 4
+2. Conteúdo 5
+3. Feedback e Finalização 8
+Referências 9
+204AULA
+Robótica módulo 1
+Introdução
+A placa de prototipagem eletrônica corresponde a uma base
+sobre a qual são inseridos vários componentes eletrônicos, dentre
+eles um microcontrolador (hardware) e um ambiente de desenvolvi-
+mento (software). A placa mais utilizada para fins educacionais é o
+Arduino Uno, por ser uma plataforma de baixo custo, de código aber-
+to e com linguagem de programação de fácil aprendizagem. Além
+disso, possui portas de entrada e saída analógicas, digitais e conector
+USB, que permitem a comunicação entre outros dispositivos. O es-
+tudo da placa de prototipagem eletrônica Arduino Uno orientará aos
+usuários a forma correta de utilizá-la, além de possibilitar o desenvol-
+vimento de diversos projetos.
+Objetivos desta Aula
+• Conhecer a placa de prototipagem eletrônica Arduino;
+• Identificar os principais componentes da placa.
+ARDUINO UNO R3
+3Robótica módulo 1
+Competências Gerais Previstas na BNCC
+[CG02] - Exercitar a curiosidade intelectual e recorrer à abordagem
+própria das ciências, incluindo a investigação, a reflexão, a análise
+crítica, a imaginação e a criatividade, para investigar causas, elabo-
+rar e testar hipóteses, formular e resolver problemas e criar soluções
+(inclusive tecnológicas) com base nos conhecimentos das diferentes
+áreas.
+[CG04] - Utilizar diferentes linguagens – verbal (oral ou visual-mo-
+tora, como Libras, e escrita), corporal, visual, sonora e digital –, bem
+como conhecimentos das linguagens artística, matemática e cientí-
+fica, para se expressar e partilhar informações, experiências, ideias e
+sentimentos em diferentes contextos e produzir sentidos que levem
+ao entendimento mútuo.
+[CG05] - Compreender, utilizar e criar tecnologias digitais de infor-
+mação e comunicação de forma crítica, significativa, reflexiva e ética
+nas diversas práticas sociais (incluindo as escolares) para se comu-
+nicar, acessar e disseminar informações, produzir conhecimentos, re-
+solver problemas e exercer protagonismo e autoria na vida pessoal e
+coletiva.
+[CG09] - Exercitar a empatia, o diálogo, a resolução de conflitos e a
+cooperação, fazendo-se respeitar e promovendo o respeito ao outro
+e aos direitos humanos, com acolhimento e valorização da diversi-
+dade de indivíduos e de grupos sociais, seus saberes, identidades,
+culturas e potencialidades, sem preconceitos de qualquer natureza.
+[CG10] - Agir pessoal e coletivamente com autonomia, responsabi-
+lidade, flexibilidade, resiliência e determinação, tomando decisões
+com base em princípios éticos, democráticos, inclusivos, sustentáveis
+e solidários.
+404AULA
+Robótica módulo 1
+Habilidades do Século XXI a
+Serem Desenvolvidas
+• Pensamento crítico;
+• Afinidade digital;
+• Resiliência;
+• Resolução de problemas;
+• Colaboração;
+• Comunicação.
+Roteiro da Aula
+1. Contextualização (15min):
+Na aula anterior, intitulada Aula 03 - Kit de Robótica, você teve
+o primeiro contato com o kit de robótica, identificou uma série de
+componentes eletrônicos presentes nele e trocou ideias sobre a pos-
+sibilidade de uso deste kit em projetos.
+Nesta aula, dentre os componentes presentes no kit, destaca-
+mos a placa de prototipagem eletrônica Arduino Uno.
+A partir das informações fornecidas na aula anterior, você sa-
+beria apontar a importância desta placa para o ensino de robótica?
+Quais as vantagens de utilização desta placa na elaboração de proje-
+tos que envolvem programação?
+5Robótica módulo 1
+2. Conteúdo (60min):
+O Arduino é uma plataforma de prototipagem eletrônica for-
+mada por dois componentes: hardware de código aberto (open-sour-
+ce), que corresponde à placa propriamente dita, funcionando como
+um mini computador capaz de processar e armazenar informações;
+e software de ambiente integrado de desenvolvimento, chamado de
+Arduino IDE, o qual possibilita escrever comandos em linguagem de
+programação C/C++ para que a placa execute operações de entrada
+e saída de informações, interagindo com seus arredores, como, por
+exemplo, para variar a intensidade de luz do ambiente ao identificar a
+aproximação de uma pessoa ou abrir as janelas de uma sala de acordo
+com a intensidade da luz do sol e temperatura ambiente. Falaremos
+sobre o software Arduino IDE na próxima aula (Aula 05 - Softwares
+Arduino IDE e mBlock).
+No mercado, há diversos modelos de placas Arduino que se
+diferenciam conforme seu tamanho, quantidade de memória e quan-
+tidade de portas, conforme o microcontrolador, tais como Arduino
+Leonardo, Arduino Mega, Arduino Nano, Arduino Uno, dentre outros.
+A placa de prototipagem eletrônica presente no kit de robóti-
+ca é o modelo Arduino Uno R3. Este modelo foi escolhido por ser o
+mais indicado para iniciantes, uma vez que possui uma quantidade de
+memória ideal à realização de diversos projetos, um bom número de
+portas digitais, além de microcontrolador não soldado na placa, ou
+seja, que pode ser removido e substituído, caso necessário.
+Componentes da placa Arduino Uno R3
+Conforme comentamos anteriormente, a placa Arduino é com-
+posta pelos componentes hardware e software, e cada um destes
+componentes apresenta estruturas e especificidades. Nesta aula, co-
+nheceremos as estruturas presentes na parte física do Arduino Uno
+R3, ou seja, no hardware, e na próxima aula (Aula 05 - Softwares Ar-
+duino IDE e mBlock), você conhecerá características dos softwares
+que serão utilizados nas atividades propostas ao longo do módulo.
+Ao analisarmos a placa de prototipagem eletrônica Arduino
+Uno, verificamos que ela é composta por diversos elementos, como
+demonstra a figura 1.
+604AULA
+Robótica módulo 1
+Figura 1 - Blocos da placa Arduino Uno
+Cada elemento presente na placa possui função específica, a
+saber:
+1. Microcontrolador: corresponde ao principal dispositivo pre-
+sente na placa Arduino, pois é responsável em rodar o código de pro-
+gramação enviado à placa. Este circuito integrado do Arduino Uno
+R3 utiliza o modelo de microcontrolador ATmega328, com 32kb de
+memória flash (onde será salvo os programas) e 2kb de SRAM (onde
+serão gravadas as variáveis dos programas). Este microcontrolador
+permite executar programas simples, como o piscar de um LED, até
+programações complexas, como o controle de acesso controlado por
+rede.
+2. Conector USB: é um cabo removível que possibilita conec-
+tar dispositivos periféricos ao computador. No Arduino Uno R3, este
+cabo serve para transmitir dados de programação, além de servir
+como fonte de energia à placa de prototipagem eletrônica.
+3. Pinos de Entrada e Saída: também chamados de portas, são
+orifícios de entrada (input) ou saída (output) que permite a interação
+do Arduino com o meio externo. No Arduino Uno R3, observamos 6
+7Robótica módulo 1
+pinos de entradas analógicas e 14 pinos digitais (I/O), dentre eles, 6
+portas modulam sinal analógico (PWM) e são identificadas pelo sinal
+gráfico til (~) antes da numeração, sendo elas: portas 3, 5, 6, 9, 10 e 11.
+Falaremos mais sobre essas portas na Aula 18 - Portas PWM.
+4. Pinos de Alimentação: são conectores que servem para ener-
+gizar circuito externo ligado ao Arduino, como, por exemplo, uma pla-
+ca shield (conheceremos as estruturas desta placa na Aula 31 - Motor
+Shield L293D Driver Ponte H. Esses pinos possibilitam a adaptação
+do circuito à voltagem fornecida pela placa de prototipagem eletrô-
+nica. Esses pinos são identificados na placa Arduino como: IOREF;
+RESET; 3,3V; 5V, GND e VIN.
+5. Botão de Reset: é o dispositivo que permite reiniciar a placa
+de prototipagem eletrônica.
+6. Conversor Serial-USB e LEDs TX/RX: é uma porta que con-
+verte uma conexão USB em conexão serial de 5V, permitindo a co-
+municação direta entre o microcontrolador (Arduino Uno R3) e o
+computador. As conexões entre esses dois elementos são sinalizadas
+pelos LEDs TX e RX, os quais acendem, informando o recebimento
+ou transmissão de dados pela porta serial. Esta sinalização ocorre
+da seguinte maneira: o LED TX pisca quando ocorre transmissão de
+informação do Arduino para o computador; quando a informação for
+enviada do computador para o Arduino, quem pisca é o LED RX.
+7. Conector de Alimentação: corresponde a um conector com
+centro positivo, responsável pela alimentação externa (não USB) do
+Arduino Uno R3. Os valores de tensões recomendados para fonte ex-
+terna é de 7V a 12V, garantindo, assim, o perfeito funcionamento da
+placa Arduino.
+8. LED de Alimentação: componente eletrônico que sinaliza
+(acende) quando a placa Arduino Uno R3 está energizada.
+9. LED Interno: componente eletrônico integrado à porta di-
+gital 13 da placa Arduino. Quando o LED estiver aceso, indica que o
+pino 13 está com valor alto (HIGH), e quando o LED estiver apagado,
+indica que o valor do pino 13 está com valor baixo (LOW).
+804AULA
+Robótica módulo 1
+Para Saber Mais...
+O nome Arduino deriva da palavra germânica Har-
+dwin, que significa amigo forte e faz menção ao rei Arduino
+de Ivrea, que governou a Itália no século XI (no período de
+1002 a 1015). Esta definição da palavra caracteriza perfeita-
+mente a placa Arduino, uma vez que é forte, resistente aos
+erros cometidos por iniciantes ao manipulá-la, e amiga por
+não demandar muito conhecimento para mexer, tornando-
+-se íntima de tudo o que está a sua volta.
+Conforme relatos, a placa de prototipagem eletrônica
+foi batizada de Arduino por seus criadores quando estes es-
+tariam em confraternização em um pub na Itália, chamado
+“Bar di Re Arduino”, nascendo assim, um novo rei a governar
+projetos inovadores ao redor do mundo.
+História do Arduino - como surgiu
+esta incrível plataforma de prototipagem
+eletrônica
+3. Feedback e Finalização (15min):
+a. Quais as maneiras que podemos alimentar (energizar) o Ar-
+duino? Compartilhe suas impressões e as novas ideias, fazendo uma
+lista em tópicos em seu caderno.
+b. Reúna todos os componentes utilizados nesta aula e os or-
+ganize novamente, junto aos demais, no kit de robótica.
+9Robótica módulo 1
+Referências
+ARDUINO. Site oficial. Ambiente de Programação do Arduino. Dis-
+ponível em: https://create.arduino.cc/editor. Acesso em: 15 out. 2021.
+ARDUINO. Site oficial. Downloads. Disponível em: www.arduino.cc/
+en/Main/Software. Acesso em: 15 out. 2021.
+BRASIL. Ministério da Educação. Base Nacional Comum Curricular.
+Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/
+images/BNCC_EI_EF_110518_versaofinal_site.pdf. Acesso em: 10
+out. 2021.
+COSTA, Fábio. História do Arduino – como surgiu esta incrível plata-
+forma de prototipagem eletrônica. Disponível em: https://fabiocosta.
+net/arduino/historia-do-arduino/. Acesso em: 16 out. 2021.
+MAKEBLOCK. mBlock. Download mBlock. Disponível em: https://
+mblock.makeblock.com/en-us/download/. Acesso em: 15 nov. 2021.
+MAKEBLOCK. mBlock. Programação em blocos. Disponível em:
+https://ide.mblock.cc/. Acesso em: 15 nov. 2021.
+Os materiais, aulas e projetos da “Robótica Paraná”, foram produzidos pela
+Coordenação de Tecnologias Educacionais (CTE), da Diretoria de Tecnologia e
+Inovação (DTI), da Secretaria de Estado da Educação e do Esporte do Paraná (Seed),
+com o objetivo de subsidiar as práticas docentes com os estudantes por meio da
+Robótica.
+Este material foi produzido para uso didático-pedagógico exclusivo em sala de aula.
+EQUIPE ROBÓTICA PARANÁ
+Adilson Carlos Batista
+Cleiton Rosa
+Darice Alessandra Deckmann Zanardini
+Edna do Rocio Becker
+Marcelo Gasparin
+Michelle dos Santos
+Ricardo Hasper
+Simone Sinara de Souza
+DIRETORIA DE TECNOLOGIAS E INOVAÇÃO (DTI)
+COORDENAÇÃO DE TECNOLOGIAS EDUCACIONAIS (CTE)
+Este trabalho está licenciado com uma Licença
+Creative Commons – CC BY-NC-SA
+Atribuição - NãoComercial - CompartilhaIgual 4.0
