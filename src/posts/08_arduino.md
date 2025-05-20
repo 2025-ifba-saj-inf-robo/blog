@@ -5,6 +5,7 @@ category:
     - aula
     - teoria
 order: 8
+star: true
 ---
 
 # Arduino
@@ -113,7 +114,7 @@ A comunicação serial é fundamental para:
 
 ## Arduino e Tinkercad
 
-[Turma no Tinkercad ](https://www.tinkercad.com/joinclass/5F7QFGMPQ)
+[Turma no Tinkercad](https://www.tinkercad.com/joinclass/5F7QFGMPQ)
 
 ![Add a heading](https://ibles-content.tinkercad.com/FD0/FKZS/LEBEG2OJ/FD0FKZSLEBEG2OJ.png?width=620&height=620&fit=bounds)
 

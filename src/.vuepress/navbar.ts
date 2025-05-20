@@ -23,9 +23,9 @@ export default navbar([
     link: "/category/exercicio/",
   },
   {
-    text: "Trabalho",
+    text: "Tinkercad",
     icon: "laptop-code",
-    link: "/category/trabalho/",
+    link: "https://www.tinkercad.com/joinclass/5F7QFGMPQ",
   },
   {
     text: "Para Entrega",
