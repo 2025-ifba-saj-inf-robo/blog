@@ -688,16 +688,16 @@ Assim, ao analisar o caminho dos sinais e as portas utilizadas, é possível esc
     \ctikzset{logic ports=ieee, logic ports/fill=gray!30}
     \begin{circuitikz}
         \node (labelA) at (0,0) {A};
-        \node[and port ,scale=2, number inputs=3] (and1) at (8,-0.8) {}
+        \node[and port ,scale=2, number inputs=3] (and1) at (8,-0.8) {};
         \draw (labelA.east) -- ++(1,0) to[inline not] ++(3,0) -- (and1.in 1);
         \draw (and1.in 2) -- ++(-5.5,0) node[left](labelB){B};
         \draw (and1.in 3) -- ++(-5.5,0) node[left](labelC){C};
-        \node[or port ,scale=2] (or1) at (8,-4) {}
+        \node[or port ,scale=2] (or1) at (8,-4) {};
         \draw (labelA.east) ++(1,0) node[circ]{} -- ++(0,-3.5) -- (or1.in 1);
         \draw (or1.in 2) -- ++(-5.5,0) node[left](labelD){D};
-        \node[and port ,scale=2] (and2) at (15,-2.5) {}
+        \node[and port ,scale=2] (and2) at (15,-2.5) {};
         \draw (and1.out) -- (and2.in 1);
-        \draw (or1.out) -- ++ to[inline not] ++(1.5,0) -- (and2.in 2);
+        \draw (or1.out) -- ++(0,0) to[inline not] ++(1.5,0) -- (and2.in 2);
     \end{circuitikz}
     ```
 
