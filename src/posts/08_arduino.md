@@ -5,7 +5,6 @@ category:
     - aula
     - teoria
 order: 8
-star: true
 ---
 
 # Arduino

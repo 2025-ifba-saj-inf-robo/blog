@@ -317,4 +317,4 @@ Como a eletricidade se trata do movimento de elétrons, a eletrônica, também a
 
 ## Referências
 
- [^RE_M1]: ESCOLA DIGITAL PR. Material didático. Disponível em: https://aluno.escoladigital.pr.gov.br/re-m1. Acesso em: 08 maio 2025.
+ [^RE_M1]: ESCOLA DIGITAL PR. Material didático. Disponível em: https://aluno.escoladigital.pr.gov.br/re-m1.
