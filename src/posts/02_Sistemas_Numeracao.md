@@ -30,7 +30,7 @@ Os sistemas de numeração que utilizamos atualmente são chamados de sistemas p
 
 ## Principais Sistemas de Numeração
 
-![Sistema de numerção e suas Bases](img/sistemas_numeracao.png)
+![Sistema de numerção e suas Bases](./img/sistemas_numeracao.png)
 
 ### Sistema Decimal (Base 10)
 

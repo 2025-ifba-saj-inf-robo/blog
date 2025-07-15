@@ -33,6 +33,11 @@ export default navbar([
     link: "/category/entrega/",
   },
   {
+    text: "Print",
+    icon: "print",
+    link: "/posts/print.md"
+  },
+  {
     text: "Timeline",
     icon: "clock",
     link: "/timeline/",

@@ -100,11 +100,34 @@ Após estudar os conceitos, realize o exercício abaixo para fixar o conteúdo:
 Monte um circuito em que o push button é ligado em série com o LED e o resistor. Quando o botão está pressionado, a corrente passa e o LED acende. Quando o botão é solto, o circuito é interrompido e o LED apaga. Nesse caso, o push button controla diretamente o fluxo de corrente para o LED e o arduino é utilizado somente para alimentar o circuito.
 
 **Montagem:**
+
 - LED1 em série com resistor de 220Ω e push button1.
 - Conecte tudo entre o VCC (5V) e o GND da protoboard.
 
 **Funcionamento:**
+
 O LED1 acende apenas enquanto o botão1 estiver pressionado, pois o botão fecha o circuito.
+#### Exemplo de Circuito Simples com Push Button
+
+<figure>
+
+```upmath
+\begin{circuitikz}
+    \draw
+    (0,0) to[battery, l=Bateria] (0,2)
+    -- (2,2) to[R, l=220\\Omega] (6,2)
+    to[switch, l=Push Button] (8,2)
+    to[lamp, l=LED] (8,0)
+    -- (0,0);
+\end{circuitikz}
+```
+
+<figcaption>Circuito simples com push button controlando LED</figcaption>
+</figure>
+
+
+O diagrama acima mostra um circuito simples: a bateria fornece energia, o resistor limita a corrente, o push button controla o fluxo e o LED acende quando o botão é pressionado.
+
 
 #### Tarefa 2: Push Button Controlando LED via Arduino
 
@@ -118,93 +141,8 @@ Monte um circuito em que o push button envia sinal para o Arduino, que então li
 **Funcionamento:**
 Quando o botão2 é pressionado, o Arduino detecta o sinal HIGH e acende o LED2. Quando o botão é solto, o LED2 apaga.
 
-#### Código Exemplo para Tarefa 2 (Arduino)
-
-```cpp
-// Controle de LED2 com Push Button2
-int ledPin = 13;
-int buttonPin = 2;
-int buttonState = 0;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
-}
-
-void loop() {
-  buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH); // Liga o LED2
-  } else {
-    digitalWrite(ledPin, LOW);  // Desliga o LED2
-  }
-}
-```
-
-#### Exercícios de Fixação
-
-1. Monte o circuito da Tarefa 1 e explique por que o LED só acende quando o botão está pressionado.
-2. Monte o circuito da Tarefa 2 e explique como o Arduino detecta o botão pressionado e aciona o LED.
-3. Modifique o código da Tarefa 2 para que o LED2 troque de estado (liga/desliga) a cada vez que o botão2 for pressionado.
-4. Adicione um segundo LED ao Arduino e faça com que ele acenda quando o botão2 não estiver pressionado.
-5. Explique a função do resistor pull-down nos dois circuitos.
-
-[Entrega](https://www.tinkercad.com/classrooms/d571uL5CipS/activities/czQUarsvvdD)
-
-## Materiais Necessários
-
-- 1 placa Arduino (Uno, Nano, etc.)
-- 2 LEDs
-- 2 resistores de 220Ω (um para cada LED)
-- 2 push buttons
-- 2 resistores de 10kΩ (pull-down para os botões)
-- Jumpers
-- Protoboard
-
-## Tarefa 1: Push Button Interrompendo Energia do LED (Circuito Simples)
-
-Neste circuito, o push button é ligado em série com o LED e o resistor. Quando o botão está pressionado, a corrente passa e o LED acende. Quando o botão é solto, o circuito é interrompido e o LED apaga.
-
-**Montagem:**
-
-- LED1 em série com resistor de 220Ω e push button1.
-- Conecte tudo entre o VCC (5V) e o GND da protoboard.
-
-**Funcionamento:**
-
-O LED1 acende apenas enquanto o botão1 estiver pressionado, pois o botão fecha o circuito.
-#### Exemplo de Circuito Simples com Push Button
 
 
-```upmath
-\begin{circuitikz}
-    \draw
-    (0,0) to[battery, l=Bateria] (0,2)
-    -- (2,2) to[R, l=220\\Omega] (6,2)
-    to[switch, l=Push Button] (8,2)
-    to[lamp, l=LED] (8,0)
-    -- (0,0);
-\end{circuitikz}
-```
-
-O diagrama acima mostra um circuito simples: a bateria fornece energia, o resistor limita a corrente, o push button controla o fluxo e o LED acende quando o botão é pressionado.
-
-## Tarefa 2: Push Button Controlando LED via Arduino
-
-Neste circuito, o push button não alimenta diretamente o LED, mas envia um sinal para o Arduino, que então liga ou desliga o LED conforme o botão é pressionado.
-
-**Montagem:**
-
-- LED2 conectado ao pino digital 13 do Arduino, com resistor de 220Ω.
-- Push button2 conectado ao pino digital 2 do Arduino, com resistor de 10kΩ (pull-down).
-- Arduino alimentado via USB.
-
-**Funcionamento:**
-
-Quando o botão2 é pressionado, o Arduino detecta o sinal HIGH e acende o LED2. Quando o botão é solto, o LED2 apaga.
-
-
-O diagrama acima mostra o push button conectado ao pino digital 2 do Arduino com resistor pull-down, e o LED conectado ao pino digital 13 com resistor limitador, ilustrando o controle digital do LED via Arduino.
 
 ## Resumo das Diferenças
 
