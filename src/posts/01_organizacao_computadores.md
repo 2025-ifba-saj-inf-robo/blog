@@ -136,12 +136,12 @@ A distinção entre arquitetura e organização é crucial para entender as capa
 
 ## Referências
 
- [^DELGADO]: DELGADO, José; RIBEIRO, Carlos. Arquitetura de Computadores. 5. ed. São Paulo: LTC, 2017. ISBN: 9788521633532.  
- 
- [^HENNESSY]: HENNESSY, John. Organização e Projeto de Computadores. 5. ed. São Paulo: Elsevier, 2017. ISBN: 9788535287936.  
- 
- [^STALLINGS]: STALLINGS, Williams. Arquitetura e Organização de Computadores. 10. ed. São Paulo: Pearson, 2017. ISBN: 9788543020532.  
- 
- [^JUNIOR]: JUNIOR, Edivaldo Donizetti Rossini. Manutenção em Notebooks. Santa Cruz do Rio Pardo: Viena, 2014. ISBN: 9788537103395.  
+[^DELGADO]: DELGADO, José; RIBEIRO, Carlos. Arquitetura de Computadores. 5. ed. São Paulo: LTC, 2017. ISBN: 9788521633532.  
 
- [^Tanenbaum]: Tanenbaum, Andrew S.; Austin, Todd. Organização Estruturada de Computadores. 6. ed. São Paulo: Pearson Education do Brasil, 2013. ISBN: 9788576059457.
+[^HENNESSY]: HENNESSY, John. Organização e Projeto de Computadores. 5. ed. São Paulo: Elsevier, 2017. ISBN: 9788535287936.  
+
+[^STALLINGS]: STALLINGS, Williams. Arquitetura e Organização de Computadores. 10. ed. São Paulo: Pearson, 2017. ISBN: 9788543020532.  
+
+[^JUNIOR]: JUNIOR, Edivaldo Donizetti Rossini. Manutenção em Notebooks. Santa Cruz do Rio Pardo: Viena, 2014. ISBN: 9788537103395.  
+
+[^Tanenbaum]: Tanenbaum, Andrew S.; Austin, Todd. Organização Estruturada de Computadores. 6. ed. São Paulo: Pearson Education do Brasil, 2013. ISBN: 9788576059457.

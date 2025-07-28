@@ -21,31 +21,53 @@ Um sistema de computador, como qualquer sistema, consiste em um conjunto inter-r
 
 <figure>
 
-```plantuml {kroki=true}
-
-rectangle "Computador" as Entrada #LightYellow{
-  rectangle "E/S" as ES #LightYellow
-  rectangle "Barreamento do Sistema" as Barreamento #LightYellow
-  rectangle "Memoria Principal" as Memoria #LightYellow
-  rectangle "CPU" as CPU #LightBlue
+```d2{kroki=true}
+vars: {
+  d2-config: {
+    layout-engine: ELK
+  }
 }
 
-rectangle "CPU" as CPU2 #LightBlue{
-  rectangle "Registradores" as R #LightBlue
-  rectangle "Barreamento Interno" as BarreamentoI #LightBlue
-  rectangle "ALU" as ALU #LightBlue
-  rectangle "Unidade de Controle" as Controle #LightGreen
+
+computador: Computador {
+  cpu: CPU
+  es: E/S
+  bar: Barreamento do Sistema
+  mem: Memoria Principal
+}
+cpu: CPU {
+  core3: Unidade de Controle
+  core0: Registradores
+  core1: Barreamento Interno
+  core2: ALU  
 }
 
-rectangle "Unidade de Controle" as Controle2 #LightGreen{
-  rectangle "Logica de Sequencia" as LS #LightGreen
-  rectangle "Memoria de Controle" as MC #LightGreen
-  rectangle "Registradores de \nunidade de controle e \nCodificações " as RU #LightGreen
-  
+uc: Unidade de Controle {
+  ls: Logica de Sequencia
+  mc: Memoria de Controle
+  ru: Registradores de unidade de controle e Codificações
 }
 
+computador.style.shadow: true
+computador.style.fill: "#ffffe0"
+computador.es.style.fill: "#ffffe0"
+computador.bar.style.fill: "#ffffe0"
+computador.mem.style.fill: "#ffffe0"
+computador.cpu.style.shadow: true
+
+
+cpu.core3.style.fill: "#90EE90"
+uc.style.fill: "#90EE90"
+uc.ls.style.fill: "#90EE90"
+uc.mc.style.fill: "#90EE90" 
+uc.ru.style.fill: "#90EE90"
+cpu.core3.style.shadow: true
+
+computador.cpu -> cpu
+cpu.core3 -> uc
 
 ```
+
 
 <figcaption>Um computador: estrutura de alto nível</figcaption>
 </figure>
