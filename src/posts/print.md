@@ -18,4 +18,6 @@ index: false
 <!-- @include: ./09_Circuito_Eletrico.md -->
 <!-- @include: ./10_Semaforo_Tinkercad.md -->
 <!-- @include: ./11_Push_Button.md -->
-
+<!-- @include: ./14_Sensor_Distancia.md -->
+<!-- @include: ./15_Ponte_H.md -->
+<!-- @include: ./16_Ponte H com Arduino.md -->
