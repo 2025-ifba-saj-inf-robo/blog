@@ -110,7 +110,7 @@ Para controlar a direção do motor, os transistores S1 e S4 são ativados para 
 
 
 
-[Ponte H com circuito L298N](https://www.tinkercad.com/things/28tQwP4wU7H-ponte-h)
+[Ponte H com circuito L293D](https://www.tinkercad.com/things/28tQwP4wU7H-ponte-h)
 
 
 ## Referências
