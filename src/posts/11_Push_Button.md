@@ -5,7 +5,7 @@ category:
   - aula
   - prática
   - entrega
-order: 13
+order: 11
 ---
 
 # Push Button: Fundamentos, Funcionamento e Aplicações

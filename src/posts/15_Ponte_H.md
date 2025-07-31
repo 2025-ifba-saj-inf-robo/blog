@@ -4,7 +4,7 @@ date: 2025-07-29 10:00:00.00 -3
 category:
   - aula
   - prática
-order: 14
+order: 15
 ---
 
 # Ponte H: Fundamentos, Funcionamento e Aplicações
@@ -42,7 +42,9 @@ Uma ponte H típica consiste em quatro transistores (ou relés) dispostos em  um
   
 \end{circuitikz}
 ```
+
 <figcaption>Ponte H</figcaption>
+
 </figure>
 
 ### Funcionamento
@@ -50,6 +52,7 @@ Uma ponte H típica consiste em quatro transistores (ou relés) dispostos em  um
 Para controlar a direção do motor, os transistores S1 e S4 são ativados para permitir a passagem de corrente em uma direção, enquanto S2 e S3 são desativados. Para inverter a direção, S2 e S3 são ativados, enquanto S1 e S4 são desativados. Isso permite que o motor gire em ambas as direções.
 
 <figure>
+
 ```upmath
 \begin{circuitikz}
   \node[sground, red, rotate=180] (vcc) at (0,0) {};
@@ -73,11 +76,13 @@ Para controlar a direção do motor, os transistores S1 e S4 são ativados para 
 \end{circuitikz}
 ```
 <figcaption>Ativação do motor</figcaption>
+
 </figure>
 
-
+### Inversão da Direção do Motor
 
 <figure>
+
 ```upmath
 \begin{circuitikz}
   \node[sground,red, rotate=180] (vcc) at (0,0) {};
