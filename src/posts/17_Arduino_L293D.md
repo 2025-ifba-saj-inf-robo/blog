@@ -22,7 +22,11 @@ Além disso, é muito importante garantir que tudo compartilhe um aterramento co
 
 Uma vez feitas as conexões de energia, podemos conectar os pinos de controle. O L293D possui dois pinos de habilitação (ENA e ENB) e quatro pinos de entrada (IN1, IN2, IN3 e IN4). Conectaremos ENA ao pino 9 do Arduino, IN1 ao pino 8, IN2 ao pino 7, IN3 ao pino 5, IN4 ao pino 4 e ENB ao pino 3.
 
-Vale a pena notar que os pinos 9 e 3 no Arduino são habilitados para PWM, o que significa que podemos usá-los mais tarde para controlar a velocidade dos motores usando PWM.
+::: tip
+
+Vale a pena notar que os pinos **9** e **3** no Arduino são habilitados para **PWM**, o que significa que podemos usá-los mais tarde para controlar a velocidade dos motores usando **PWM**.
+
+:::
 
 Por fim, conectaremos nossos motores. Pegue um motor e conecte seus dois fios aos pinos OUT1 e OUT2 do L293D. Em seguida, conecte o segundo motor aos pinos OUT3 e OUT4. Não se preocupe muito com qual fio vai para qual pino de saída do motor; você pode trocá-los se o motor girar na direção oposta à esperada, pois não existe uma maneira única "certa" ou "errada" de conectá-los.
 

@@ -120,9 +120,7 @@ Ao definir diferentes combinações de sinais ALTO ou BAIXO nesses pinos, você 
 
 ### Pinos de controle de velocidade
 
-Os pinos `ENA`e  `ENBO` controlam a velocidade com que seus motores giram.
-
-
+Os pinos `ENA`e  `ENB` controlam a velocidade com que seus motores giram.
 
 ![Entradas de controle de velocidade L293D](./img/L293D/velocidade.png)
 
