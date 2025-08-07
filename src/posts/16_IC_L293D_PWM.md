@@ -131,6 +131,9 @@ Mas esses pinos podem fazer mais do que apenas ligar ou desligar os motores. Ao 
 
 Com o PWM, você habilita e desabilita o motor rapidamente, várias vezes por segundo. A chave é o ciclo de trabalho, ou seja, quanto tempo o sinal permanece LIGADO em cada ciclo. Um tempo LIGADO mais longo significa que o motor fica ativo por mais tempo do ciclo, então ele gira mais rápido. Um tempo LIGADO mais curto significa que ele fica habilitado por menos tempo por ciclo, então ele gira mais lentamente.
 
+## Exemplo 
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/2DFwgAaLrud?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ## Referências
 

@@ -108,9 +108,9 @@ Para controlar a direção do motor, os transistores S1 e S4 são ativados para 
 <figcaption>Inversão do motor</figcaption>
 </figure>
 
+## Exemplo 
 
-
-[Ponte H com circuito L293D](https://www.tinkercad.com/things/28tQwP4wU7H-ponte-h)
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/dF5IMBjpajd?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 
 ## Referências
