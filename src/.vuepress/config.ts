@@ -10,7 +10,8 @@ export default defineUserConfig({
    plugins:[
     copyPlusPlugin({
       fileExtensions: ['zip']
-    })
+    }),
+    upmathPlugin()
   ],
 
   base: "/blog/",
@@ -38,7 +39,6 @@ export default defineUserConfig({
     md.use(table_captions)
   },
 
-  plugins: [upmathPlugin()],
 
 
   theme,

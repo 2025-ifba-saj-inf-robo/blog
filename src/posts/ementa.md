@@ -60,6 +60,7 @@ Ação de acompanhamento da aprendizagem do estudante e de reflexão do professo
 ## Ferramentas
 
 - [Drive Android Uno](./files/CH341SER.zip)
+- [Drive Esp32 NodeMCU](./files/CP210x_Universal_Windows_Driver.zip)
 - Logisim (ou logisim-evolution)
 
 ## Bibliografia básica:
