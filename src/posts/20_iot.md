@@ -42,7 +42,13 @@ Segundo a AWS, IoT refere-se à rede de dispositivos físicos que usam sensores,
 A IoT está transformando diversos setores, tornando processos mais inteligentes e conectados. Com o avanço da inteligência artificial e redes 5G, espera-se que a quantidade de dispositivos conectados cresça exponencialmente, trazendo novas oportunidades e desafios.
 
 ## Atividade
-Pesquise exemplos de dispositivos IoT que você utiliza ou conhece. Identificar no projeto da disciplina como utilizar IoT.
+Pesquise exemplos de dispositivos IoT que você utiliza ou conhece. Identificar no projeto da 
+disciplina como utilizar IoT.
+
+- Criar conta no site https://app.arduino.cc/
+- acessar https://docs.arduino.cc/arduino-cloud/guides/editor/
+- instalar o [Cloud Agent](https://cloud.arduino.cc/download-agent/).
+- seguir o tutorial [Cloud Editor](https://docs.arduino.cc/arduino-cloud/guides/editor/)
 
 ---
 
