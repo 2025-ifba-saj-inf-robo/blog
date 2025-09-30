@@ -8,4 +8,4 @@ order: 3
 
 # Entrega Código do Hardware
 
-[Link](https://classroom.github.com/a/_OKBT52k)
+[Link para entrega do código do projeto da disciplina](https://classroom.github.com/a/_OKBT52k)
