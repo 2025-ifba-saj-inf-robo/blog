@@ -29,13 +29,16 @@ bool led = false;
 BluetoothSerial SerialBT;
 
 void setup() {
+  Serial.begin(9600);
   randomSeed(esp_random());
   int random_number = random(1000, 9999);
+  //int random_number = 4203;//remover comentario para definir um valor fixo
   device_name = device_name + String(random_number);
 
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, led);
-
+  Serial.print("device_name: ");
+  Serial.println(device_name);
   SerialBT.begin(device_name); //Bluetooth device name
 }
 
