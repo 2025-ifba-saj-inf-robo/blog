@@ -60,3 +60,14 @@ void processaMensagem(String input){
 }
 
 ```
+
+- Open the Arduino IDE.
+- Navigate to File > Preferences.
+- In the "Additional Board Manager URLs" field, add the official ESP32 package URL:
+
+```
+https://dl.espressif.com/dl/package_esp32_index.json
+```
+
+DOIT ESP32 Dev Kit v1
+
