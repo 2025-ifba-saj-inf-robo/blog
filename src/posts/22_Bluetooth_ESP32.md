@@ -61,6 +61,8 @@ void processaMensagem(String input){
 
 ```
 
+## Adicionar placa DOIT ESP32 DevKIT V1
+
 - Open the Arduino IDE.
 - Navigate to File > Preferences.
 - In the "Additional Board Manager URLs" field, add the official ESP32 package URL:
@@ -69,5 +71,9 @@ void processaMensagem(String input){
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
 
-DOIT ESP32 Dev Kit v1
+![Add](./img/esp32/addplaca.png)
+
+Pinout no ESP
+
+![Esquema](./img/esp32/ESP32-DOIT-DEV-KIT-v1-pinout-mischianti.png)
 
