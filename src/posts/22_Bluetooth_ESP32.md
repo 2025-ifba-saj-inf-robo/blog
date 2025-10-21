@@ -61,6 +61,10 @@ void processaMensagem(String input){
 
 ```
 
+## Serial Bluetooth Terminal
+
+Utilizar o [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=pt_BR) para conectar o smartphone ao ESP32
+
 ## Adicionar placa DOIT ESP32 DevKIT V1
 
 - Open the Arduino IDE.
