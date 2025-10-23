@@ -3,6 +3,7 @@ icon: dumbbell
 date: 2025-09-30 9:10:11.00 -3
 category:
   - exercicio
+  - entrega
 order: 3
 ---
 
