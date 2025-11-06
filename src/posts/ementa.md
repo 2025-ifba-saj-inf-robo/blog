@@ -63,6 +63,10 @@ Ação de acompanhamento da aprendizagem do estudante e de reflexão do professo
 - [Drive Esp32 NodeMCU](../files/CP210x_Universal_Windows_Driver.zip)
 - Logisim (ou logisim-evolution)
 
+## Windows 11 
+
+![Drive no Windows 11](./img/DriveESPWin11.png)
+
 ## Bibliografia básica:
 
 - TOCCI, Ronald J. et Al. **Sistemas Digitais – princípios e aplicações.** 11ª edição. Pearson Education do Brasil. 2011.
